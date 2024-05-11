@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#036635"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/starbucks_logo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="120dp"
+            android:src="@drawable/ic_startbucks_logo" />
+
+    </LinearLayout>
+</layout>
