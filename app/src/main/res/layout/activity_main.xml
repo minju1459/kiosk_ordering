@@ -3,9 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-    </data>
+    <data></data>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -41,10 +39,9 @@
                     android:textAlignment="center"
                     android:textColor="@color/white"
                     android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:fontFamily="@font/pretendard_bold" />
             </LinearLayout>
         </androidx.appcompat.widget.Toolbar>
-
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/toolbar_menu"
             android:layout_width="match_parent"
@@ -67,6 +64,11 @@
                     android:layout_height="match_parent" />
             </FrameLayout>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grayscales_500" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -85,7 +87,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="5dp"
+                        android:fontFamily="@font/pretendard_semibold"
                         android:textColor="@color/black"
+                        android:textSize="16sp"
                         android:text="@string/tv_main_order_list" />
 
                     <androidx.recyclerview.widget.RecyclerView
@@ -95,19 +99,23 @@
                         android:padding="10dp" />
                 </LinearLayout>
 
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="250dp"
+                    android:background="@color/grayscales_500" />
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="3"
-                    android:background="#D9F6CD"
-                    android:orientation="vertical"
-                    android:padding="5dp">
+                    android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:padding="5dp">
+                        android:padding="7dp"
+                        android:paddingStart="8dp">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -119,6 +127,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/main_tv_total_count"
                                 android:textColor="@color/black"
+                                android:fontFamily="@font/font_pretendard_regular"
                                 android:textSize="16sp" />
 
                             <TextView
@@ -128,6 +137,7 @@
                                 android:paddingHorizontal="3dp"
                                 android:textColor="@color/semantic_red_500"
                                 tools:text="0"
+                                android:fontFamily="@font/pretendard_semibold"
                                 android:textSize="16sp" />
 
                             <TextView
@@ -135,6 +145,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/main_tv_total_count_unit"
                                 android:textColor="@color/semantic_red_500"
+                                android:fontFamily="@font/pretendard_semibold"
                                 android:textSize="16sp" />
 
                         </LinearLayout>
@@ -149,6 +160,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/main_tv_total_pay"
                                 android:textColor="@color/black"
+                                android:fontFamily="@font/font_pretendard_regular"
                                 android:textSize="16sp" />
 
                             <TextView
@@ -156,6 +168,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:paddingHorizontal="3dp"
+                                android:fontFamily="@font/pretendard_semibold"
                                 android:textColor="@color/semantic_red_500"
                                 tools:text="0"
                                 android:textSize="16sp" />
@@ -165,26 +178,28 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/main_tv_totla_pay_unit"
                                 android:textColor="@color/semantic_red_500"
+                                android:fontFamily="@font/pretendard_semibold"
                                 android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="6dp"
                         android:orientation="horizontal">
 
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:layout_margin="10dp"
                             android:orientation="vertical">
 
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
+                                android:background="@color/grayscales_600"
+                                android:padding="13dp"
                                 android:layout_weight="1"
                                 android:src="@drawable/ic_main_delete" />
 
@@ -192,20 +207,29 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:layout_weight="1"
+                                android:background="@color/grayscales_400"
+                                android:padding="13dp"
                                 android:src="@drawable/ic_home_code" />
-
                         </LinearLayout>
+
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:paddingVertical="40dp"
+                            android:background="@color/semantic_red_500"
+                            android:fontFamily="@font/pretendard_semibold"
+                            android:paddingVertical="45dp"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
                             android:text="@string/home_btn_pay" />
                     </LinearLayout>
 
                     <Button
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/grayscales_800"
+                        android:fontFamily="@font/pretendard_semibold"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
                         android:text="@string/main_tv_reset" />
                 </LinearLayout>
             </LinearLayout>

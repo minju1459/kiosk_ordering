@@ -39,12 +39,12 @@
                 android:id="@+id/btn_store"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="12dp"
+                android:layout_margin="15dp"
                 android:layout_weight="1"
-                android:background="@drawable/shape_white_rect"
+                android:background="@drawable/shape_transparent_fill_white_line_20_rect"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="22dp">
 
                 <ImageView
                     android:id="@+id/iv_store"
@@ -67,12 +67,12 @@
                 android:id="@+id/btn_take_out"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="12dp"
+                android:layout_margin="15dp"
                 android:layout_weight="1"
-                android:background="@drawable/shape_white_rect"
+                android:background="@drawable/shape_transparent_fill_white_line_20_rect"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="20dp">
 
                 <ImageView
                     android:id="@+id/iv_take_out"
