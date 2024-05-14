@@ -85,6 +85,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="5dp"
+                        android:textColor="@color/black"
                         android:text="@string/tv_main_order_list" />
 
                     <androidx.recyclerview.widget.RecyclerView
@@ -116,7 +117,8 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="총 수량 : "
+                                android:text="@string/main_tv_total_count"
+                                android:textColor="@color/black"
                                 android:textSize="16sp" />
 
                             <TextView
@@ -124,13 +126,15 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:paddingHorizontal="3dp"
-                                android:text="0"
+                                android:textColor="@color/semantic_red_500"
+                                tools:text="0"
                                 android:textSize="16sp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="개"
+                                android:text="@string/main_tv_total_count_unit"
+                                android:textColor="@color/semantic_red_500"
                                 android:textSize="16sp" />
 
                         </LinearLayout>
@@ -143,7 +147,8 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="총 금액 : "
+                                android:text="@string/main_tv_total_pay"
+                                android:textColor="@color/black"
                                 android:textSize="16sp" />
 
                             <TextView
@@ -151,13 +156,15 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:paddingHorizontal="3dp"
-                                android:text="0"
+                                android:textColor="@color/semantic_red_500"
+                                tools:text="0"
                                 android:textSize="16sp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="원"
+                                android:text="@string/main_tv_totla_pay_unit"
+                                android:textColor="@color/semantic_red_500"
                                 android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
@@ -188,19 +195,18 @@
                                 android:src="@drawable/ic_home_code" />
 
                         </LinearLayout>
-
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:paddingVertical="40dp"
-                            android:text="결제하기\n(Pay)" />
+                            android:text="@string/home_btn_pay" />
                     </LinearLayout>
 
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="처음으로 (Reset)" />
+                        android:text="@string/main_tv_reset" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

@@ -5,4 +5,10 @@
     <string name="home_tv_take_out">포장</string>
     <string name="main_tv_logo">STARKBUCKS</string>
     <string name="tv_main_order_list">주문 내역 (order list)</string>
+    <string name="main_tv_total_count">총 수량 :</string>
+    <string name="main_tv_total_count_unit">개</string>
+    <string name="main_tv_total_pay">총 금액 :</string>
+    <string name="main_tv_totla_pay_unit">원</string>
+    <string name="home_btn_pay">결제하기\n(Pay)</string>
+    <string name="main_tv_reset">처음으로 (Reset)</string>
 </resources>
