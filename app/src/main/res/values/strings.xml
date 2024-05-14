@@ -3,4 +3,6 @@
     <string name="home_tv_select_method">주문 방법을 선택해주세요</string>
     <string name="home_tv_store">매장</string>
     <string name="home_tv_take_out">포장</string>
+    <string name="main_tv_logo">STARKBUCKS</string>
+    <string name="tv_main_order_list">주문 내역 (order list)</string>
 </resources>
