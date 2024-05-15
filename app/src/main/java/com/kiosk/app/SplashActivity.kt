@@ -15,6 +15,6 @@ class SplashActivity : BindingActivity<ActivitySplashBinding>(R.layout.activity_
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
             finish()
-        }, 1500)
+        }, 2000)
     }
 }

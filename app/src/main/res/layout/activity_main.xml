@@ -79,24 +79,32 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="5"
-                    android:background="#FFFFFF"
-                    android:orientation="vertical"
-                    android:padding="6dp">
+                    android:background="@color/grayscales_100"
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:padding="5dp"
+                        android:layout_marginStart="5dp"
+                        android:padding="6dp"
                         android:fontFamily="@font/pretendard_semibold"
                         android:textColor="@color/black"
-                        android:textSize="16sp"
+                        android:textSize="15sp"
                         android:text="@string/tv_main_order_list" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grayscales_500" />
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/rv_select_menu"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:padding="10dp" />
+                        android:background="@color/white"
+                        android:paddingStart="10dp"
+                        android:paddingTop="3dp"
+                        tools:listitem="@layout/item_select_menu" />
                 </LinearLayout>
 
                 <View
@@ -217,7 +225,7 @@
                             android:layout_height="wrap_content"
                             android:background="@color/semantic_red_500"
                             android:fontFamily="@font/pretendard_semibold"
-                            android:paddingVertical="45dp"
+                            android:paddingVertical="50dp"
                             android:textColor="@color/white"
                             android:textSize="15sp"
                             android:text="@string/home_btn_pay" />

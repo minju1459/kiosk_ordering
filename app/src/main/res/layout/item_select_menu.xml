@@ -1,0 +1,133 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data></data>
+
+    <LinearLayout
+        android:id="@+id/layout_select_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="4dp">
+
+        <LinearLayout
+            android:id="@+id/layout_select_option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_select_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/font_pretendard_semibold"
+                android:textColor="@color/black"
+                android:textSize="11sp"
+                tools:text="바닐라 헤이즐넛 라떼" />
+
+            <TextView
+                android:id="@+id/second_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="샷 추가"
+                android:textColor="@color/grayscales_600"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/third_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="휘핑 크림 추가"
+                android:textColor="@color/grayscales_600"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btn_minus"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/shape_transparent_fill_grayscales400_line_15_round"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_main_minus" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_menu_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:textColor="@color/black"
+                        android:textSize="11sp"
+                        tools:text="5" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="개"
+                        android:textColor="@color/black"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/btn_plus"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="4dp"
+                    android:background="@drawable/shape_transparent_fill_grayscales400_line_15_round"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_main_plus" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_menu_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/pretendard_bold"
+                    android:textSize="11sp"
+                    tools:text="25000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="원"
+                    android:textColor="@color/black"
+                    android:textSize="11sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btn_delete_menu"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="3dp"
+            android:scaleType="centerInside"
+            android:padding="1dp"
+            android:src="@drawable/ic_main_delete_select_menu" />
+    </LinearLayout>
+
+</layout>
+
+
