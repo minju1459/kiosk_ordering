@@ -17,7 +17,7 @@ class EspressoFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_espresso, container, false)
 
         val recyclerView: RecyclerView = view.findViewById(R.id.recyclerView)
-        recyclerView.layoutManager = GridLayoutManager(context, 2)
+        recyclerView.layoutManager = GridLayoutManager(context, 4)
         recyclerView.adapter = EspressoAdater(getItems())
 
         return view
@@ -26,6 +26,15 @@ class EspressoFragment : Fragment() {
     private fun getItems(): List<Item> {
         return listOf(
             Item(R.drawable.ic_main_delete, "딸기 라떼", "3500원"),
+            Item(R.drawable.ic_main_delete, "딸기 라떼", "3500원"),
+            Item(R.drawable.ic_main_delete, "딸기 라떼", "3500원"),
+            Item(R.drawable.ic_main_delete, "딸기 라떼", "3500원"),
+            Item(R.drawable.ic_main_delete, "딸기 라떼", "3500원"),
+            Item(R.drawable.ic_main_delete, "딸기 라떼", "3500원"),
+            Item(R.drawable.ic_main_delete, "딸기 라떼", "3500원"),
+            Item(R.drawable.ic_main_delete, "딸기 라떼", "3500원"),
+            Item(R.drawable.ic_main_delete, "딸기 라떼", "3500원"),
+
             // 다른 아이템들 추가
         )
     }

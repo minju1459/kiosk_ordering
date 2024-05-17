@@ -12,7 +12,8 @@ class ViewPagerAdapter(fragmentActivity: FragmentActivity) :
 
     private val fragmentTitleList = listOf(
         "Espresso",
-        // 다른 탭 제목 추가
+        "ColdBrew",
+        "Food",
     )
 
     override fun getItemCount(): Int = fragmentList.size

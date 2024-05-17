@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <LinearLayout
         android:id="@+id/lyj_strawLatte"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:clickable="true"
         android:gravity="center"
         android:orientation="vertical"
+        android:focusable="true"
         android:padding="5dp">
 
         <ImageView
@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="5dp"
-            android:text="딸기 라떼"
+            tools:text="딸기 라떼"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="11sp"
@@ -41,14 +41,14 @@
                 android:id="@+id/lyj_strawLatte_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="3500"
+                tools:text="3500"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="원"
+                tools:text="원"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
         </LinearLayout>
