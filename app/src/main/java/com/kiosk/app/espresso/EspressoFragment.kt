@@ -33,15 +33,15 @@ class EspressoFragment : Fragment() {
 
     private fun getItems(): List<Item> {
         return listOf(
-            Item(R.drawable.ic_main_delete, "딸기 라떼", "3500원"),
-            Item(R.drawable.ic_main_delete, "딸기 라떼", "3500원"),
-            Item(R.drawable.ic_main_delete, "딸기 라떼", "3500원"),
-            Item(R.drawable.ic_main_delete, "딸기 라떼", "3500원"),
-            Item(R.drawable.ic_main_delete, "딸기 라떼", "3500원"),
-            Item(R.drawable.ic_main_delete, "딸기 라떼", "3500원"),
-            Item(R.drawable.ic_main_delete, "딸기 라떼", "3500원"),
-            Item(R.drawable.ic_main_delete, "딸기 라떼", "3500원"),
-            Item(R.drawable.ic_main_delete, "딸기 라떼", "3500원"),
+            Item(R.drawable.img_green, "딸기 라떼", "3500원"),
+            Item(R.drawable.img_green, "딸기 라떼", "3500원"),
+            Item(R.drawable.img_green, "딸기 라떼", "3500원"),
+            Item(R.drawable.img_green, "딸기 라떼", "3500원"),
+            Item(R.drawable.img_green, "딸기 라떼", "3500원"),
+            Item(R.drawable.img_green, "딸기 라떼", "3500원"),
+            Item(R.drawable.img_green, "딸기 라떼", "3500원"),
+            Item(R.drawable.img_green, "딸기 라떼", "3500원"),
+            Item(R.drawable.img_green, "딸기 라떼", "3500원"),
         )
     }
 

@@ -21,7 +21,6 @@
                 android:id="@+id/iv_teabana_menu"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:padding="16dp"
                 android:src="@drawable/ic_main_delete" />
 
             <TextView

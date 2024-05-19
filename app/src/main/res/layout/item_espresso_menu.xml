@@ -19,21 +19,18 @@
 
             <ImageView
                 android:id="@+id/iv_espresso_menu"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:padding="16dp"
-                android:src="@drawable/ic_main_delete" />
+                android:layout_width="80dp"
+                android:layout_height="80dp" />
 
         <TextView
             android:id="@+id/tv_espresso_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="5dp"
+            android:layout_marginTop="8dp"
             tools:text="딸기 라떼"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="11sp"
+            android:textSize="12sp"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -47,14 +44,14 @@
                 android:layout_height="wrap_content"
                 tools:text="3500"
                 android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textSize="12sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:text="원"
                 android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textSize="12sp" />
         </LinearLayout>
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
