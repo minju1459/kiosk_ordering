@@ -1,27 +1,31 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
-        android:id="@+id/lyj_strawLatte"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:clickable="true"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:focusable="true"
-        android:padding="5dp">
+    <data></data>
 
-        <ImageView
-            android:id="@+id/lyj_strawLatte_img"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/ic_main_delete"
-            android:padding="16dp" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/layout_espresso_menu"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/iv_espresso_menu"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="16dp"
+                android:src="@drawable/ic_main_delete" />
 
         <TextView
-            android:id="@+id/lyj_strawLatte_text"
+            android:id="@+id/tv_espresso_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -38,7 +42,7 @@
             android:gravity="center">
 
             <TextView
-                android:id="@+id/lyj_strawLatte_price"
+                android:id="@+id/tv_espresso_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:text="3500"
@@ -52,5 +56,6 @@
                 android:textColor="@color/black"
                 android:textSize="14sp" />
         </LinearLayout>
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

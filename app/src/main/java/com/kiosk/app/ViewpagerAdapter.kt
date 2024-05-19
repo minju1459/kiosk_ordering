@@ -1,6 +1,7 @@
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.kiosk.app.espresso.EspressoFragment
 
 class ViewPagerAdapter(fragmentActivity: FragmentActivity) :
     FragmentStateAdapter(fragmentActivity) {
@@ -13,7 +14,10 @@ class ViewPagerAdapter(fragmentActivity: FragmentActivity) :
     private val fragmentTitleList = listOf(
         "Espresso",
         "ColdBrew",
-        "Food",
+        "Blended",
+        "Teabana",
+        "Dessert",
+
     )
 
     override fun getItemCount(): Int = fragmentList.size

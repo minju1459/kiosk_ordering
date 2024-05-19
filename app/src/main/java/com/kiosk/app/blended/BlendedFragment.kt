@@ -1,26 +1,34 @@
+package com.kiosk.app.blended
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.kiosk.app.R
+import com.kiosk.app.databinding.FragmentBlendedBinding
 
-class EspressoFragment : Fragment() {
+class BlendedFragment : Fragment() {
+
+    private var _binding: FragmentBlendedBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ): View? {
-        val view = inflater.inflate(R.layout.fragment_espresso, container, false)
+    ): View {
+        _binding = FragmentBlendedBinding.inflate(inflater, container, false)
+        return binding.root
+    }
 
-        val recyclerView: RecyclerView = view.findViewById(R.id.recyclerView)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val recyclerView = binding.rvBlended
         recyclerView.layoutManager = GridLayoutManager(context, 4)
-        recyclerView.adapter = EspressoAdater(getItems())
-
-        return view
+        recyclerView.adapter = BlendedAdapter(getItems())
     }
 
     private fun getItems(): List<Item> {
@@ -34,8 +42,11 @@ class EspressoFragment : Fragment() {
             Item(R.drawable.ic_main_delete, "딸기 라떼", "3500원"),
             Item(R.drawable.ic_main_delete, "딸기 라떼", "3500원"),
             Item(R.drawable.ic_main_delete, "딸기 라떼", "3500원"),
-
-            // 다른 아이템들 추가
         )
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
