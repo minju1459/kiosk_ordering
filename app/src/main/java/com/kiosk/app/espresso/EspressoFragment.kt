@@ -25,10 +25,8 @@ class EspressoFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        val recyclerView = binding.rvEspresso
-        recyclerView.layoutManager = GridLayoutManager(context, 4)
-        recyclerView.adapter = EspressoAdapter(getItems())
+        binding.rvEspresso.layoutManager = GridLayoutManager(context, 4)
+        binding.rvEspresso.adapter = EspressoAdapter(getItems())
     }
 
     private fun getItems(): List<Item> {
