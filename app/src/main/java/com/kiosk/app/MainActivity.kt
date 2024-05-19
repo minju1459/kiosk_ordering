@@ -1,11 +1,14 @@
 package com.kiosk.app
 
+import SelectMenuAdapter
 import ViewPagerAdapter
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.kiosk.app.databinding.ActivityMainBinding
+import com.kiosk.app.espresso.Item
 import com.sopt.instagram.util.binding.BindingActivity
 
 class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main) {
@@ -15,6 +18,7 @@ class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main
 
         val viewPager: ViewPager2 = findViewById(R.id.vp_menu)
         val tabLayout: TabLayout = findViewById(R.id.toolbar_menu)
+        val recyclerView = binding.rvSelectMenu
 
         val adapter = ViewPagerAdapter(this)
         viewPager.adapter = adapter
@@ -22,5 +26,17 @@ class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             tab.text = adapter.getPageTitle(position)
         }.attach()
+
+        recyclerView.layoutManager = LinearLayoutManager(this)
+
+        val items = listOf(
+            Item(R.drawable.img_green, "Espresso", "5000원"),
+            Item(R.drawable.img_green, "Cold Brew", "6000원"),
+            Item(R.drawable.img_green, "Blended", "7000원"),
+            Item(R.drawable.img_green, "Teabana", "8000원"),
+            Item(R.drawable.img_green, "Dessert", "9000원"),
+        )
+        val selectMenuAdapter = SelectMenuAdapter(items)
+        recyclerView.adapter = selectMenuAdapter
     }
 }
