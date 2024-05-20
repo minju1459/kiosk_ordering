@@ -16,14 +16,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
-            android:scaleType="fitStart"
-            android:src="@drawable/img_home_event" />
+            android:src="@drawable/ic_home_event" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:paddingVertical="30dp"
+            android:paddingVertical="10dp"
             android:text="@string/home_tv_select_method"
             android:textAlignment="center"
             android:textColor="@color/white"
@@ -39,8 +38,10 @@
                 android:id="@+id/btn_store"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
+                android:layout_marginVertical="25dp"
                 android:layout_weight="1"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="14dp"
                 android:background="@drawable/shape_transparent_fill_white_line_20_rect"
                 android:gravity="center"
                 android:orientation="vertical"
@@ -60,7 +61,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/home_tv_store"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
                     android:textSize="18sp" />
             </LinearLayout>
 
@@ -68,9 +70,9 @@
                 android:id="@+id/btn_take_out"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="15dp"
+                android:layout_marginVertical="25dp"
                 android:layout_weight="1"
-                android:layout_marginEnd="15dp"
+                android:layout_marginEnd="25dp"
                 android:background="@drawable/shape_transparent_fill_white_line_20_rect"
                 android:gravity="center"
                 android:orientation="vertical"
@@ -90,7 +92,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/home_tv_take_out"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
                     android:textSize="18sp" />
             </LinearLayout>
         </LinearLayout>
@@ -98,7 +101,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="110dp"
+            android:layout_marginTop="50dp"
             android:text="※ 환경부 제도 시행 | 매장 내 1회용품 사용 금지 \n 주문이 어려우시거나 현금 결제 등을 원하실 경우 직원을 통해 결제 바랍니다."
             android:textAlignment="center"
             android:textColor="@color/white"
