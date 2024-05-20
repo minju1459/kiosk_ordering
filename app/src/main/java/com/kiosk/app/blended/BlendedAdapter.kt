@@ -9,15 +9,6 @@ import com.kiosk.app.databinding.ItemBlendedMenuBinding
 class BlendedAdapter(private val items: List<Item>) :
     RecyclerView.Adapter<BlendedAdapter.ViewHolder>() {
 
-    inner class ViewHolder(private val binding: ItemBlendedMenuBinding) :
-        RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: Item) {
-            binding.ivBlendedMenu.setImageResource(item.image)
-            binding.tvBlendedName.text = item.name
-            binding.tvBlendedPrice.text = item.price
-        }
-    }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding =
             ItemBlendedMenuBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -29,5 +20,13 @@ class BlendedAdapter(private val items: List<Item>) :
     }
 
     override fun getItemCount() = items.size
-}
 
+    class ViewHolder(private val binding: ItemBlendedMenuBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        fun bind(item: Item) {
+            binding.ivBlendedMenu.setImageResource(item.image)
+            binding.tvBlendedName.text = item.name
+            binding.tvBlendedPrice.text = item.price
+        }
+    }
+}

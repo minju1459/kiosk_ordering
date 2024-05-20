@@ -9,18 +9,8 @@ import com.kiosk.app.databinding.ItemTeabanaMenuBinding
 class TeabanaAdapter(private val items: List<Item>) :
     RecyclerView.Adapter<TeabanaAdapter.ViewHolder>() {
 
-    inner class ViewHolder(private val binding: ItemTeabanaMenuBinding) :
-        RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: Item) {
-            binding.ivTeabanaMenu.setImageResource(item.image)
-            binding.tvTeabanaName.text = item.name
-            binding.tvTeabanaPrice.text = item.price
-        }
-    }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val binding =
-            ItemTeabanaMenuBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = ItemTeabanaMenuBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)
     }
 
@@ -29,4 +19,13 @@ class TeabanaAdapter(private val items: List<Item>) :
     }
 
     override fun getItemCount() = items.size
+
+    class ViewHolder(private val binding: ItemTeabanaMenuBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        fun bind(item: Item) {
+            binding.ivTeabanaMenu.setImageResource(item.image)
+            binding.tvTeabanaName.text = item.name
+            binding.tvTeabanaPrice.text = item.price
+        }
+    }
 }

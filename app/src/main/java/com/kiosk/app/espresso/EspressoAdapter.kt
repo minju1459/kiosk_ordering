@@ -9,15 +9,6 @@ import com.kiosk.app.databinding.ItemEspressoMenuBinding
 class EspressoAdapter(private val items: List<Item>) :
     RecyclerView.Adapter<EspressoAdapter.ViewHolder>() {
 
-    inner class ViewHolder(private val binding: ItemEspressoMenuBinding) :
-        RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: Item) {
-            binding.ivEspressoMenu.setImageResource(item.image)
-            binding.tvEspressoName.text = item.name
-            binding.tvEspressoPrice.text = item.price
-        }
-    }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = ItemEspressoMenuBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)
@@ -28,5 +19,13 @@ class EspressoAdapter(private val items: List<Item>) :
     }
 
     override fun getItemCount() = items.size
-}
 
+    class ViewHolder(private val binding: ItemEspressoMenuBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        fun bind(item: Item) {
+            binding.ivEspressoMenu.setImageResource(item.image)
+            binding.tvEspressoName.text = item.name
+            binding.tvEspressoPrice.text = item.price
+        }
+    }
+}

@@ -9,18 +9,8 @@ import com.kiosk.app.databinding.ItemColdbrewMenuBinding
 class BlendedAdapter(private val items: List<Item>) :
     RecyclerView.Adapter<BlendedAdapter.ViewHolder>() {
 
-    inner class ViewHolder(private val binding: ItemColdbrewMenuBinding) :
-        RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: Item) {
-            binding.ivColdbrewMenu.setImageResource(item.image)
-            binding.tvColdbrewName.text = item.name
-            binding.tvColdbrewPrice.text = item.price
-        }
-    }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val binding =
-            ItemColdbrewMenuBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = ItemColdbrewMenuBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)
     }
 
@@ -29,5 +19,14 @@ class BlendedAdapter(private val items: List<Item>) :
     }
 
     override fun getItemCount() = items.size
+
+    class ViewHolder(private val binding: ItemColdbrewMenuBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        fun bind(item: Item) {
+            binding.ivColdbrewMenu.setImageResource(item.image)
+            binding.tvColdbrewName.text = item.name
+            binding.tvColdbrewPrice.text = item.price
+        }
+    }
 }
 

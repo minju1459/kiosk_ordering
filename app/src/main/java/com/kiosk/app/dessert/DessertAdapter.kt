@@ -9,15 +9,6 @@ import com.kiosk.app.databinding.ItemDessertMenuBinding
 class DessertAdapter(private val items: List<Item>) :
     RecyclerView.Adapter<DessertAdapter.ViewHolder>() {
 
-    inner class ViewHolder(private val binding: ItemDessertMenuBinding) :
-        RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: Item) {
-            binding.ivDessertMenu.setImageResource(item.image)
-            binding.tvDessertName.text = item.name
-            binding.tvDessertPrice.text = item.price
-        }
-    }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding =
             ItemDessertMenuBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -29,5 +20,13 @@ class DessertAdapter(private val items: List<Item>) :
     }
 
     override fun getItemCount() = items.size
-}
 
+    class ViewHolder(private val binding: ItemDessertMenuBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        fun bind(item: Item) {
+            binding.ivDessertMenu.setImageResource(item.image)
+            binding.tvDessertName.text = item.name
+            binding.tvDessertPrice.text = item.price
+        }
+    }
+}
