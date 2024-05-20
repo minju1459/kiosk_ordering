@@ -4,7 +4,6 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.kiosk.app.blended.BlendedFragment
 import com.kiosk.app.coldbrew.ColdBrewFragment
 import com.kiosk.app.dessert.DessertFragment
-import com.kiosk.app.espresso.EspressoFragment
 import com.kiosk.app.teabana.TeabanaFragment
 
 class ViewPagerAdapter(fragmentActivity: FragmentActivity) :

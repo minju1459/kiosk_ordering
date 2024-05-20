@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.kiosk.app.Item
 import com.kiosk.app.databinding.ItemBlendedMenuBinding
+import com.sopt.instagram.util.extension.setOnSingleClickListener
 
 class BlendedAdapter(private val items: List<Item>) :
     RecyclerView.Adapter<BlendedAdapter.ViewHolder>() {
@@ -27,6 +28,9 @@ class BlendedAdapter(private val items: List<Item>) :
             binding.ivBlendedMenu.setImageResource(item.image)
             binding.tvBlendedName.text = item.name
             binding.tvBlendedPrice.text = item.price
+            binding.root.setOnSingleClickListener {
+
+            }
         }
     }
 }
