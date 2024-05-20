@@ -14,10 +14,9 @@ import com.sopt.instagram.util.binding.BindingActivity
 class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
-        val viewPager: ViewPager2 = findViewById(R.id.vp_menu)
-        val tabLayout: TabLayout = findViewById(R.id.toolbar_menu)
+        val viewPager: ViewPager2 = binding.vpMenu
+        val tabLayout: TabLayout = binding.toolbarMenu
         val recyclerView = binding.rvSelectMenu
 
         val adapter = ViewPagerAdapter(this)
@@ -30,7 +29,7 @@ class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         val items = listOf(
-            Item(R.drawable.img_green, "Espresso", "5000원"),
+            Item(R.drawable.img_green, "바닐라 칩 에스프레소", "5000원"),
             Item(R.drawable.img_green, "Cold Brew", "6000원"),
             Item(R.drawable.img_green, "Blended", "7000원"),
             Item(R.drawable.img_green, "Teabana", "8000원"),

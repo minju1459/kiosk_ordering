@@ -11,4 +11,5 @@
     <string name="main_tv_totla_pay_unit">원</string>
     <string name="home_btn_pay">결제하기\n(Pay)</string>
     <string name="main_tv_reset">처음으로 (Reset)</string>
+    <string name="main_tv_select_menu_count">개</string>
 </resources>

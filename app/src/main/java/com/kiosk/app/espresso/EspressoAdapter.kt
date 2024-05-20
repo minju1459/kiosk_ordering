@@ -18,8 +18,7 @@ class EspressoAdapter(private val items: List<Item>) :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val binding =
-            ItemEspressoMenuBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = ItemEspressoMenuBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)
     }
 
