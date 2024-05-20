@@ -3,8 +3,8 @@ package com.kiosk.app.blended
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.kiosk.app.Item
 import com.kiosk.app.databinding.ItemBlendedMenuBinding
-import com.kiosk.app.databinding.ItemEspressoMenuBinding
 
 class BlendedAdapter(private val items: List<Item>) :
     RecyclerView.Adapter<BlendedAdapter.ViewHolder>() {
@@ -31,4 +31,3 @@ class BlendedAdapter(private val items: List<Item>) :
     override fun getItemCount() = items.size
 }
 
-data class Item(val image: Int, val name: String, val price: String)

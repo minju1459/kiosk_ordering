@@ -3,6 +3,7 @@ package com.kiosk.app.dessert
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.kiosk.app.Item
 import com.kiosk.app.databinding.ItemDessertMenuBinding
 
 class DessertAdapter(private val items: List<Item>) :
@@ -30,4 +31,3 @@ class DessertAdapter(private val items: List<Item>) :
     override fun getItemCount() = items.size
 }
 
-data class Item(val image: Int, val name: String, val price: String)

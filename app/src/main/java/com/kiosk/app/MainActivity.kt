@@ -8,7 +8,6 @@ import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.kiosk.app.databinding.ActivityMainBinding
-import com.kiosk.app.espresso.Item
 import com.sopt.instagram.util.binding.BindingActivity
 
 class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main) {

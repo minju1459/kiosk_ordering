@@ -1,8 +1,8 @@
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.kiosk.app.Item
 import com.kiosk.app.databinding.ItemSelectMenuBinding
-import com.kiosk.app.espresso.Item
 
 class SelectMenuAdapter(private val items: List<Item>) :
     RecyclerView.Adapter<SelectMenuAdapter.ViewHolder>() {
