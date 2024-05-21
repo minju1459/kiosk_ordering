@@ -6,7 +6,7 @@ import com.kiosk.app.R
 import com.kiosk.app.databinding.DialogIceOptionBinding
 import com.kiosk.app.util.binding.BindingDialogFragment
 
-class DialogColdOption :
+class DialogIceOption :
     BindingDialogFragment<DialogIceOptionBinding>(R.layout.dialog_ice_option) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
