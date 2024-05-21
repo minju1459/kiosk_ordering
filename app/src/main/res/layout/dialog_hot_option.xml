@@ -283,7 +283,7 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/btn_option_next"
+            android:id="@+id/btn_option_end"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/pretendard_bold"
@@ -291,7 +291,8 @@
             android:background="@color/grayscales_500"
             android:layout_gravity="right"
             android:layout_marginEnd="15dp"
-            android:text="다음" />
+            android:layout_marginBottom="15dp"
+            android:text="@string/option_btn_end" />
 
     </LinearLayout>
 </layout>

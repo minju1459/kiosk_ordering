@@ -31,4 +31,5 @@
     <string name="option_tv_reheat">워밍 옵션</string>
     <string name="option_tv_reheat_yes">따뜻하게 \n데움</string>
     <string name="option_btn_non_reheat">데우지\n않음</string>
+    <string name="option_btn_end">완료</string>
 </resources>
