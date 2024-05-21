@@ -17,11 +17,10 @@ class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main
 
     private var _adapter: SelectMenuAdapter? = null
     private val adapter
-        get() = requireNotNull(_adapter) { "adapter_not_initialized_error_msg " }
+        get() = requireNotNull(_adapter) { getString(R.string.adapter_not_initialized_error_msg) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.d("MainActivity", "onCreate() called")
 
         val viewPager: ViewPager2 = binding.vpMenu
         val tabLayout: TabLayout = binding.toolbarMenu

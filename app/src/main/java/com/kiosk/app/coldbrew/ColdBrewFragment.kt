@@ -15,7 +15,7 @@ class ColdBrewFragment : BindingFragment<FragmentColdbrewBinding>(R.layout.fragm
 
     private var _adapter: ColdBrewAdapter? = null
     private val adapter
-        get() = requireNotNull(_adapter) { "adapter_not_initialized_error_msg" }
+        get() = requireNotNull(_adapter) { getString(R.string.adapter_not_initialized_error_msg) }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
