@@ -8,6 +8,7 @@ import com.kiosk.app.Item
 import com.kiosk.app.MainViewModel
 import com.kiosk.app.R
 import com.kiosk.app.databinding.FragmentBlendedBinding
+import com.kiosk.app.option.DialogIceOption
 import com.kiosk.app.util.binding.BindingFragment
 
 class BlendedFragment : BindingFragment<FragmentBlendedBinding>(R.layout.fragment_blended) {
@@ -21,10 +22,15 @@ class BlendedFragment : BindingFragment<FragmentBlendedBinding>(R.layout.fragmen
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.rvBlended.layoutManager = GridLayoutManager(context, 4)
-        _adapter = BlendedAdapter(viewModel)
+        _adapter = BlendedAdapter(viewModel, ::showDialog)
         binding.rvBlended.adapter = adapter
         val items = getItems()
         adapter.submitList(items)
+    }
+
+    private fun showDialog() {
+        val dialog = DialogIceOption()
+        dialog.show(parentFragmentManager, "DialogIceOption")
     }
 
     private fun getItems(): List<Item> {

@@ -12,6 +12,7 @@ import com.sopt.instagram.util.extension.setOnSingleClickListener
 
 class BlendedAdapter(
     private val viewModel: MainViewModel,
+    private val showDialog: () -> Unit,
 ) : ListAdapter<Item, BlendedAdapter.ViewHolder>(diffUtil) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -20,7 +21,7 @@ class BlendedAdapter(
             parent,
             false,
         )
-        return ViewHolder(binding, viewModel)
+        return ViewHolder(binding, viewModel, showDialog)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -36,21 +37,23 @@ class BlendedAdapter(
     class ViewHolder(
         private val binding: ItemBlendedMenuBinding,
         private val viewModel: MainViewModel,
+        private val showDialog: () -> Unit,
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: Item) {
             binding.ivBlendedMenu.setImageResource(item.image)
             binding.tvBlendedName.text = item.name
             binding.tvBlendedPrice.text = item.price
-            binding.root.setOnSingleClickListener {
+            binding.layoutBlendedMenu.setOnSingleClickListener {
                 viewModel.setSelectedItem(item)
+                showDialog()
             }
         }
     }
 
     companion object {
         private val diffUtil = DiffCallback<Item>(
-            onItemsTheSame = { old, new -> old == new }, // Assuming Item has an 'id' field
+            onItemsTheSame = { old, new -> old == new },
             onContentsTheSame = { old, new -> old == new },
         )
     }
