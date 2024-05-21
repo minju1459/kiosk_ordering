@@ -1,7 +1,6 @@
 package com.kiosk.app
 
 import SelectMenuAdapter
-import ViewPagerAdapter
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
