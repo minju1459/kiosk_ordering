@@ -13,4 +13,14 @@
     <string name="main_tv_reset">처음으로 (Reset)</string>
     <string name="main_tv_select_menu_count">개</string>
     <string name="adapter_not_initialized_error_msg">Adapter is not initialized</string>
+    <string name="option_tv_title">옵션 선택 (options)</string>
+    <string name="option_tv_temperature">1. 온도 (hot or ice)</string>
+    <string name="option_tv_ice_only">ice only</string>
+    <string name="option_tv_size">2. 사이즈 (size)</string>
+    <string name="option_tv_tall_size">Tall</string>
+    <string name="option_grande_size">Grande</string>
+    <string name="option_tv_venti_size">Venti</string>
+    <string name="option_tv_add_option">3. 추가 옵션</string>
+    <string name="option_tv_espresso_shot">에스프레소\n샷 추가</string>
+    <string name="option_tv_syrub">시럽 \n추가</string>
 </resources>

@@ -70,4 +70,6 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
 
     implementation ("androidx.constraintlayout:constraintlayout:2.1.4")
+
+    implementation ("de.hdodenhof:circleimageview:3.1.0")
 }
