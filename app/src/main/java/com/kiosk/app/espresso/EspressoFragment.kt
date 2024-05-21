@@ -28,29 +28,26 @@ class EspressoFragment : BindingFragment<FragmentEspressoBinding>(R.layout.fragm
 
     private fun getItems(): List<Item> {
         return listOf(
-            Item(R.drawable.img_green, "(ICE)플랫 화이트", "3500원"),
-            Item(R.drawable.img_green, "(HOT)플랫 화이트", "3500원"),
-            Item(R.drawable.img_green, "(HOT)에스프레소 콘 파나", "3500원"),
-            Item(R.drawable.img_green, "(HOT)에스프레소 마키아또", "3500원"),
-            Item(R.drawable.img_green, "(ICE)카페 아메리카노", "3500원"),
-            Item(R.drawable.img_green, "(HOT)카페 아메리카노", "3500원"),
-            Item(R.drawable.img_green, "(ICE)카라멜 마키아또", "3500원"),
-            Item(R.drawable.img_green, "(HOT)카라멜 마키아또", "3500원"),
-            Item(R.drawable.img_green, "(ICE)카푸치노", "3500원"),
-            Item(R.drawable.img_green, "(HOT)카푸치노", "3500원"),
-            Item(R.drawable.img_green, "(ICE)라벤더 카페 브레베", "3500원"),
-            Item(R.drawable.img_green, "(ICE)바닐라빈 라떼", "3500원"),
-            Item(R.drawable.img_green, "(ICE)사케라또 비안코 오버", "3500원"),
-            Item(R.drawable.img_green, "(ICE)스타벅스 1호점 카페 라떼", "3500원"),
-            Item(R.drawable.img_green, "(ICE)스타벅스 돌체 라떼", "3500원"),
-            Item(R.drawable.img_green, "(ICE)카페 라떼", "3500원"),
-            Item(R.drawable.img_green, "(HOT)카페 라떼", "3500원"),
-            Item(R.drawable.img_green, "(ICE)카페 모카", "3500원"),
-            Item(R.drawable.img_green, "(ICE)화이트 초콜릿 모카", "3500원"),
-            Item(R.drawable.img_green, "(ICE)바닐라 스타벅스 더블 샷", "3500원"),
-
-            //TODO : 메뉴 추후에 또 추가 에정
-
+            Item(R.drawable.img_ice_flat_white, "(ICE)플랫 화이트", "5600원"),
+            Item(R.drawable.img_hot_flat_white, "(HOT)플랫 화이트", "5600원"),
+            Item(R.drawable.img_espresso_conpana, "(ICE)에스프레소 콘 파나", "4200원"),
+            Item(R.drawable.img_espresso_machiaddo, "(HOT)에스프레소 마키아또", "4000원"),
+            Item(R.drawable.img_ice_americano, "(ICE)카페 아메리카노", "4500원"),
+            Item(R.drawable.img_hot_americano, "(HOT)카페 아메리카노", "4500원"),
+            Item(R.drawable.img_ice_caramel, "(ICE)카라멜 마키아또", "5900원"),
+            Item(R.drawable.img_hot_caramel, "(HOT)카라멜 마키아또", "5900원"),
+            Item(R.drawable.img_ice_cappuchino, "(ICE)카푸치노", "5000원"),
+            Item(R.drawable.img_hot_cappuchino, "(HOT)카푸치노", "5000원"),
+            Item(R.drawable.img_ice_vanilla_bean, "(ICE)바닐라빈 라떼", "5900원"),
+            Item(R.drawable.img_ice_sacheraddo, "(ICE)사케라또 비안코 오버", "6000원"),
+            Item(R.drawable.img_hot_ilho, "(HOT)스타벅스 1호점 카페 라떼", "6500원"),
+            Item(R.drawable.img_hot_dolche_latte, "(HOT)스타벅스 돌체 라떼", "5900원"),
+            Item(R.drawable.img_ice_cafe_latte, "(ICE)카페 라떼", "5000원"),
+            Item(R.drawable.img_hot_cafe_latte, "(HOT)카페 라떼", "5000원"),
+            Item(R.drawable.img_ice_caffe_mocha, "(ICE)카페 모카", "5500원"),
+            Item(R.drawable.img_ice_white_chocolate, "(ICE)화이트 초콜릿 모카", "5900원"),
+            Item(R.drawable.img_ice_vanilla_double_shot, "(ICE)바닐라 스타벅스 더블 샷", "5100원"),
+            Item(R.drawable.img_ice_classic_apogato, "(ICE)클래식 아포가토", "5700원"),
         )
     }
 }
