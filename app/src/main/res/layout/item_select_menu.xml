@@ -38,23 +38,25 @@
                 tools:text="바닐라 헤이즐넛 라떼" />
 
             <TextView
-                android:id="@+id/second_textview"
+                android:id="@+id/tv_first_option"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
                 android:fontFamily="@font/font_pretendard_regular"
-                android:text="샷 추가"
+                tools:text="샷 추가"
                 android:textColor="@color/grayscales_600"
-                android:textSize="11sp" />
+                android:textSize="11sp"
+                android:visibility="gone" />
 
             <TextView
-                android:id="@+id/third_textview"
+                android:id="@+id/tv_second_option"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="휘핑 크림 추가"
+                tools:text="휘핑 크림 추가"
                 android:fontFamily="@font/font_pretendard_regular"
                 android:textColor="@color/grayscales_600"
-                android:textSize="11sp" />
+                android:textSize="11sp"
+                android:visibility="gone" />
 
         </LinearLayout>
 
