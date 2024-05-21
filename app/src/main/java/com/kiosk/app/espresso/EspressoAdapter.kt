@@ -1,5 +1,6 @@
 package com.kiosk.app.espresso
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
@@ -43,6 +44,8 @@ class EspressoAdapter(
             binding.tvEspressoName.text = item.name
             binding.tvEspressoPrice.text = item.price
             binding.layoutEspressoMenu.setOnSingleClickListener {
+                Log.d("minju","minjju")
+                Log.d("minju",item.name)
                 viewModel.setSelectedItem(item)
             }
         }

@@ -2,7 +2,7 @@ package com.kiosk.app.espresso
 
 import android.os.Bundle
 import android.view.View
-import androidx.fragment.app.viewModels
+import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import com.kiosk.app.Item
 import com.kiosk.app.MainViewModel
@@ -12,7 +12,7 @@ import com.kiosk.app.util.binding.BindingFragment
 
 class EspressoFragment : BindingFragment<FragmentEspressoBinding>(R.layout.fragment_espresso) {
 
-    private val viewModel by viewModels<MainViewModel>()
+    private val viewModel by activityViewModels<MainViewModel>()
 
     private var _adapter: EspressoAdapter? = null
     private val adapter
