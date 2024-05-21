@@ -38,7 +38,6 @@ class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main
         recyclerView.adapter = selectMenuAdapter
 
         viewModel.selectedItem.observe(this) { selectedItem ->
-            Log.d("zzz", selectedItem?.name ?: "null")
             selectedItem?.let {
                 selectMenuAdapter.addItems(listOf(it))
             }

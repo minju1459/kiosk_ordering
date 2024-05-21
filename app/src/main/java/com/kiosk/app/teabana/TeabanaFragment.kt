@@ -2,6 +2,7 @@ package com.kiosk.app.teabana
 
 import android.os.Bundle
 import android.view.View
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import com.kiosk.app.Item
@@ -12,7 +13,7 @@ import com.kiosk.app.util.binding.BindingFragment
 
 class TeabanaFragment : BindingFragment<FragmentTeabanaBinding>(R.layout.fragment_teabana) {
 
-    private val viewModel by viewModels<MainViewModel>()
+    private val viewModel by activityViewModels<MainViewModel>()
 
     private var _adapter: TeabanaAdapter? = null
     private val adapter

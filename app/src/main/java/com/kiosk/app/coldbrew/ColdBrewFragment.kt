@@ -2,6 +2,7 @@ package com.kiosk.app.coldbrew
 
 import android.os.Bundle
 import android.view.View
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import com.kiosk.app.Item
@@ -11,7 +12,7 @@ import com.kiosk.app.databinding.FragmentColdbrewBinding
 import com.kiosk.app.util.binding.BindingFragment
 
 class ColdBrewFragment : BindingFragment<FragmentColdbrewBinding>(R.layout.fragment_coldbrew) {
-    private val viewModel by viewModels<MainViewModel>()
+    private val viewModel by activityViewModels<MainViewModel>()
 
     private var _adapter: ColdBrewAdapter? = null
     private val adapter
