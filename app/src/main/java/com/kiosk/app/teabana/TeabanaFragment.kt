@@ -3,12 +3,12 @@ package com.kiosk.app.teabana
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import com.kiosk.app.Item
 import com.kiosk.app.MainViewModel
 import com.kiosk.app.R
 import com.kiosk.app.databinding.FragmentTeabanaBinding
+import com.kiosk.app.option.DialogIceOption
 import com.kiosk.app.util.binding.BindingFragment
 
 class TeabanaFragment : BindingFragment<FragmentTeabanaBinding>(R.layout.fragment_teabana) {
@@ -22,10 +22,15 @@ class TeabanaFragment : BindingFragment<FragmentTeabanaBinding>(R.layout.fragmen
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.rvTeabana.layoutManager = GridLayoutManager(context, 4)
-        _adapter = TeabanaAdapter(viewModel)
+        _adapter = TeabanaAdapter(viewModel,::showDialog)
         binding.rvTeabana.adapter = adapter
         val items = getItems()
         adapter.submitList(items)
+    }
+
+    private fun showDialog() {
+        val dialog = DialogIceOption()
+        dialog.show(parentFragmentManager, "DialogIceOption")
     }
 
     private fun getItems(): List<Item> {
