@@ -281,5 +281,17 @@
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_option_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendard_bold"
+            android:textSize="15sp"
+            android:background="@color/grayscales_500"
+            android:layout_gravity="right"
+            android:layout_marginEnd="15dp"
+            android:text="다음" />
+
     </LinearLayout>
 </layout>
