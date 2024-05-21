@@ -12,12 +12,13 @@ import com.sopt.instagram.util.extension.setOnSingleClickListener
 
 class DessertAdapter(
     private val viewModel: MainViewModel,
+    private val showDialog: () -> Unit,
 ) : ListAdapter<Item, DessertAdapter.DessertViewHolder>(diffUtil) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DessertViewHolder {
         val binding =
             ItemDessertMenuBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return DessertViewHolder(binding, viewModel)
+        return DessertViewHolder(binding, viewModel, showDialog)
     }
 
     override fun onBindViewHolder(holder: DessertViewHolder, position: Int) {
@@ -33,6 +34,7 @@ class DessertAdapter(
     class DessertViewHolder(
         private val binding: ItemDessertMenuBinding,
         private val viewModel: MainViewModel,
+        private val showDialog: () -> Unit,
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: Item) {
             binding.ivDessertMenu.setImageResource(item.image)
@@ -40,15 +42,15 @@ class DessertAdapter(
             binding.tvDessertPrice.text = item.price
             binding.layoutDessertMenu.setOnSingleClickListener {
                 viewModel.setSelectedItem(item)
+                showDialog()
             }
         }
     }
 
-        companion object {
-            private val diffUtil = DiffCallback<Item>(
-                onItemsTheSame = { old, new -> old == new }, // Assuming Item has an 'id' field
-                onContentsTheSame = { old, new -> old == new },
-            )
-        }
+    companion object {
+        private val diffUtil = DiffCallback<Item>(
+            onItemsTheSame = { old, new -> old == new },
+            onContentsTheSame = { old, new -> old == new },
+        )
     }
-
+}

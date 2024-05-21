@@ -9,6 +9,8 @@ import com.kiosk.app.Item
 import com.kiosk.app.MainViewModel
 import com.kiosk.app.R
 import com.kiosk.app.databinding.FragmentDessertBinding
+import com.kiosk.app.option.DialogHeatOption
+import com.kiosk.app.option.DialogIceOption
 import com.kiosk.app.util.binding.BindingFragment
 
 class DessertFragment : BindingFragment<FragmentDessertBinding>(R.layout.fragment_dessert) {
@@ -23,10 +25,15 @@ class DessertFragment : BindingFragment<FragmentDessertBinding>(R.layout.fragmen
         super.onViewCreated(view, savedInstanceState)
 
         binding.rvDessert.layoutManager = GridLayoutManager(context, 4)
-        _adapter = DessertAdapter(viewModel)
+        _adapter = DessertAdapter(viewModel,::showDialog)
         binding.rvDessert.adapter = adapter
         val items = getItems()
         adapter.submitList(items)
+    }
+
+    private fun showDialog() {
+        val dialog = DialogHeatOption()
+        dialog.show(parentFragmentManager, "DialogHeatOption")
     }
 
     private fun getItems(): List<Item> {
