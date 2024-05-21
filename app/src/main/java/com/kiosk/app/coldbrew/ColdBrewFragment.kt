@@ -3,12 +3,12 @@ package com.kiosk.app.coldbrew
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import com.kiosk.app.Item
 import com.kiosk.app.MainViewModel
 import com.kiosk.app.R
 import com.kiosk.app.databinding.FragmentColdbrewBinding
+import com.kiosk.app.option.DialogIceOption
 import com.kiosk.app.util.binding.BindingFragment
 
 class ColdBrewFragment : BindingFragment<FragmentColdbrewBinding>(R.layout.fragment_coldbrew) {
@@ -20,12 +20,16 @@ class ColdBrewFragment : BindingFragment<FragmentColdbrewBinding>(R.layout.fragm
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         binding.rvColdbrew.layoutManager = GridLayoutManager(context, 4)
-        _adapter = ColdBrewAdapter(viewModel)
+        _adapter = ColdBrewAdapter(viewModel, ::showDialog)
         binding.rvColdbrew.adapter = adapter
         val items = getItems()
         adapter.submitList(items)
+    }
+
+    private fun showDialog() {
+        val dialog = DialogIceOption()
+        dialog.show(parentFragmentManager, "DialogIceOption")
     }
 
     private fun getItems(): List<Item> {
