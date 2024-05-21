@@ -13,18 +13,18 @@ import com.sopt.instagram.util.extension.setOnSingleClickListener
 class BlendedAdapter(
     private val viewModel: MainViewModel,
     private val showDialog: () -> Unit,
-) : ListAdapter<Item, BlendedAdapter.ViewHolder>(diffUtil) {
+) : ListAdapter<Item, BlendedAdapter.BlendedViewHolder>(diffUtil) {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BlendedViewHolder {
         val binding = ItemBlendedMenuBinding.inflate(
             LayoutInflater.from(parent.context),
             parent,
             false,
         )
-        return ViewHolder(binding, viewModel, showDialog)
+        return BlendedViewHolder(binding, viewModel, showDialog)
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: BlendedViewHolder, position: Int) {
         holder.bind(getItem(position))
     }
 
@@ -34,7 +34,7 @@ class BlendedAdapter(
         submitList(currentItems)
     }
 
-    class ViewHolder(
+    class BlendedViewHolder(
         private val binding: ItemBlendedMenuBinding,
         private val viewModel: MainViewModel,
         private val showDialog: () -> Unit,

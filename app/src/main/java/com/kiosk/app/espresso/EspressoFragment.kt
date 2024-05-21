@@ -41,7 +41,6 @@ class EspressoFragment : BindingFragment<FragmentEspressoBinding>(R.layout.fragm
             Item(R.drawable.img_green, "(ICE)라벤더 카페 브레베", "3500원"),
             Item(R.drawable.img_green, "(ICE)바닐라빈 라떼", "3500원"),
             Item(R.drawable.img_green, "(ICE)사케라또 비안코 오버", "3500원"),
-            Item(R.drawable.img_green, "(ICE)스타벅스 1호점 바닐라 빈 라떼", "3500원"),
             Item(R.drawable.img_green, "(ICE)스타벅스 1호점 카페 라떼", "3500원"),
             Item(R.drawable.img_green, "(ICE)스타벅스 돌체 라떼", "3500원"),
             Item(R.drawable.img_green, "(ICE)카페 라떼", "3500원"),

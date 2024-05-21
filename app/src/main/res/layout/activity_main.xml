@@ -79,7 +79,7 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="5"
+                    android:layout_weight="5.6"
                     android:background="@color/grayscales_100"
                     android:orientation="vertical">
 
@@ -88,7 +88,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
                         android:padding="6dp"
-                        android:fontFamily="@font/pretendard_semibold"
+                        android:fontFamily="@font/pretendard_bold"
                         android:textColor="@color/black"
                         android:textSize="15sp"
                         android:text="@string/tv_main_order_list" />
@@ -134,7 +134,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/main_tv_total_count"
                                 android:textColor="@color/black"
-                                android:fontFamily="@font/font_pretendard_regular"
+                                android:fontFamily="@font/pretendard_semibold"
                                 android:textSize="16sp" />
 
                             <TextView
@@ -167,7 +167,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/main_tv_total_pay"
                                 android:textColor="@color/black"
-                                android:fontFamily="@font/font_pretendard_regular"
+                                android:fontFamily="@font/pretendard_semibold"
                                 android:textSize="16sp" />
 
                             <TextView
