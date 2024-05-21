@@ -1,4 +1,4 @@
-package com.example.ui.base
+package com.kiosk.app.util.binding
 
 import android.os.Bundle
 import android.view.LayoutInflater
