@@ -1,34 +1,43 @@
 package com.kiosk.app.espresso
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.kiosk.app.Item
 import com.kiosk.app.MainViewModel
 import com.kiosk.app.databinding.ItemEspressoMenuBinding
+import com.kiosk.app.util.DiffCallback
 import com.sopt.instagram.util.extension.setOnSingleClickListener
 
-class EspressoAdapter(private val items: List<Item>, private val viewModel: MainViewModel) :
-    RecyclerView.Adapter<EspressoAdapter.ViewHolder>() {
+class EspressoAdapter(
+    private val viewModel: MainViewModel,
+) : ListAdapter<Item, EspressoAdapter.EspressoViewHolder>(diffUtil) {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val binding =
-            ItemEspressoMenuBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return ViewHolder(binding, viewModel)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EspressoViewHolder {
+        val binding = ItemEspressoMenuBinding.inflate(
+            LayoutInflater.from(parent.context),
+            parent,
+            false,
+        )
+        return EspressoViewHolder(binding, viewModel)
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(items[position])
+    override fun onBindViewHolder(holder: EspressoViewHolder, position: Int) {
+        holder.bind(getItem(position))
     }
 
-    override fun getItemCount() = items.size
+    fun addItems(newItems: List<Item>) {
+        val currentItems = currentList.toMutableList()
+        currentItems.addAll(newItems)
+        submitList(currentItems)
+    }
 
-    class ViewHolder(
+    class EspressoViewHolder(
         private val binding: ItemEspressoMenuBinding,
         private val viewModel: MainViewModel,
-    ) :
-        RecyclerView.ViewHolder(binding.root) {
+    ) : RecyclerView.ViewHolder(binding.root) {
+
         fun bind(item: Item) {
             binding.ivEspressoMenu.setImageResource(item.image)
             binding.tvEspressoName.text = item.name
@@ -37,5 +46,12 @@ class EspressoAdapter(private val items: List<Item>, private val viewModel: Main
                 viewModel.setSelectedItem(item)
             }
         }
+    }
+
+    companion object {
+        private val diffUtil = DiffCallback<Item>(
+            onItemsTheSame = { old, new -> old == new }, // Assuming Item has an 'id' field
+            onContentsTheSame = { old, new -> old == new },
+        )
     }
 }

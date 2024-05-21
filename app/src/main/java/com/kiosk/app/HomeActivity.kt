@@ -3,7 +3,7 @@ package com.kiosk.app
 import android.content.Intent
 import android.os.Bundle
 import com.kiosk.app.databinding.ActivityHomeBinding
-import com.sopt.instagram.util.binding.BindingActivity
+import com.kiosk.app.util.binding.BindingActivity
 import com.sopt.instagram.util.extension.setOnSingleClickListener
 
 class HomeActivity : BindingActivity<ActivityHomeBinding>(R.layout.activity_home) {

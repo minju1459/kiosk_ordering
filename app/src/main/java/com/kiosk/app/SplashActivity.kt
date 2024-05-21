@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import com.kiosk.app.databinding.ActivitySplashBinding
-import com.sopt.instagram.util.binding.BindingActivity
+import com.kiosk.app.util.binding.BindingActivity
 
 class SplashActivity : BindingActivity<ActivitySplashBinding>(R.layout.activity_splash) {
 

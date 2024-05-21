@@ -1,4 +1,4 @@
-package com.sopt.instagram.util
+package com.kiosk.app.util
 
 import android.os.SystemClock
 import android.view.View

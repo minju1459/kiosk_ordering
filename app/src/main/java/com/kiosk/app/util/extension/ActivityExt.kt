@@ -1,4 +1,4 @@
-package com.sopt.instagram.util.extension
+package com.kiosk.app.util.extension
 
 import android.app.Activity
 import android.view.View

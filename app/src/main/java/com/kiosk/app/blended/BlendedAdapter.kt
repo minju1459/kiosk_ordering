@@ -7,8 +7,9 @@ import com.kiosk.app.Item
 import com.kiosk.app.databinding.ItemBlendedMenuBinding
 import com.sopt.instagram.util.extension.setOnSingleClickListener
 
-class BlendedAdapter(private val items: List<Item>) :
-    RecyclerView.Adapter<BlendedAdapter.ViewHolder>() {
+class BlendedAdapter(
+    private val items: List<Item>
+) : RecyclerView.Adapter<BlendedAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding =

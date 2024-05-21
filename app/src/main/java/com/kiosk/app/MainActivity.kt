@@ -3,14 +3,22 @@ package com.kiosk.app
 import SelectMenuAdapter
 import ViewPagerAdapter
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.kiosk.app.databinding.ActivityMainBinding
-import com.sopt.instagram.util.binding.BindingActivity
+import com.kiosk.app.util.binding.BindingActivity
 
 class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main) {
+
+    private val viewModel by viewModels<MainViewModel>()
+
+    private var _adapter: SelectMenuAdapter? = null
+    private val adapter
+        get() = requireNotNull(_adapter) { "adapter_not_initialized_error_msg " }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
