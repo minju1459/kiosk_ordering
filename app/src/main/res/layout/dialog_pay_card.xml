@@ -13,10 +13,10 @@
             android:layout_height="wrap_content"
             android:background="#599468"
             android:fontFamily="@font/pretendard_bold"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="@string/pay_tv_ttitle"
-        android:textColor="@android:color/white"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/pay_tv_ttitle"
+            android:textColor="@android:color/white"
             android:textSize="18sp" />
 
         <TextView
