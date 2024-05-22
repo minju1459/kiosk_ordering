@@ -7,6 +7,7 @@ import com.kiosk.app.MainViewModel
 import com.kiosk.app.R
 import com.kiosk.app.databinding.DialogHotOptionBinding
 import com.kiosk.app.util.binding.BindingDialogFragment
+import com.sopt.instagram.util.extension.setOnSingleClickListener
 
 class DialogHotOption :
     BindingDialogFragment<DialogHotOptionBinding>(R.layout.dialog_hot_option) {
@@ -17,6 +18,9 @@ class DialogHotOption :
 
         viewModel.selectedItem.observe(viewLifecycleOwner) { selectedItem ->
             binding.ivMenuImage.setImageResource(selectedItem.image)
+        }
+        binding.btnOptionQuit.setOnSingleClickListener {
+            dismiss()
         }
     }
 }
