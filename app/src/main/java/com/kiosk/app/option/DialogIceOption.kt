@@ -41,7 +41,6 @@ class DialogIceOption :
         binding.layoutEspresso.setOnSingleClickListener {
             binding.layoutEspresso.setBackgroundResource(R.color.yello_main_300)
         }
-
         binding.layoutSyrub.setOnSingleClickListener {
             binding.layoutSyrub.setBackgroundResource(R.color.yello_main_300)
         }
