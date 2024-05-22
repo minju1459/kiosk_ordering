@@ -34,6 +34,14 @@ class SelectMenuAdapter : RecyclerView.Adapter<SelectMenuAdapter.SelectMenuViewH
         }
     }
 
+    private fun updateItemPrice(position: Int, newPrice: Int) {
+        if (position in items.indices) {
+            val updatedItem = items[position].copy(price = newPrice)
+            items[position] = updatedItem
+            notifyItemChanged(position)
+        }
+    }
+
     private fun removeItem(position: Int) {
         if (position in items.indices) {
             items.removeAt(position)
@@ -53,10 +61,12 @@ class SelectMenuAdapter : RecyclerView.Adapter<SelectMenuAdapter.SelectMenuViewH
 
             binding.btnPlus.setOnSingleClickListener {
                 updateItemCount(adapterPosition, item.count + 1)
+                updateItemPrice(adapterPosition, item.price * 2)
             }
             binding.btnMinus.setOnSingleClickListener {
                 if (item.count > 1) {
                     updateItemCount(adapterPosition, item.count - 1)
+                    updateItemPrice(adapterPosition, item.price / 2)
                 }
             }
             binding.btnDeleteMenu.setOnSingleClickListener {
