@@ -54,7 +54,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
                     android:textSize="14sp"
-                    android:text="원" />
+                    android:text="@string/item_tv_price" />
             </LinearLayout>
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
