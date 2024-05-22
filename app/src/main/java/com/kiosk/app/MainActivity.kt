@@ -2,7 +2,6 @@ package com.kiosk.app
 
 import android.os.Bundle
 import androidx.activity.viewModels
-import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
@@ -42,20 +41,18 @@ class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main
                 adapter.addItems(listOf(it))
             }
         }
-
         viewModel.totalItemCount.observe(
             this,
-            Observer { totalCount ->
-                binding.tvTotalCount.text = totalCount.toString()
-            },
-        )
+        ) { totalCount ->
+            binding.tvTotalCount.text = totalCount.toString()
+        }
 
         viewModel.totalItemPrice.observe(
             this,
-            Observer { totalPrice ->
-                binding.tvTotalPrice.text = totalPrice.toString()
-            },
-        )
+        ) { totalPrice ->
+            binding.tvTotalPrice.text = totalPrice.toString()
+        }
+
         binding.btnPayCard.setOnSingleClickListener {
             val totalPrice = viewModel.totalItemPrice.value ?: 0
             val dialog = DialogPayCard(totalPrice)

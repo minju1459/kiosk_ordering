@@ -22,5 +22,6 @@ class DialogHeatOption :
         binding.btnOptionQuit.setOnSingleClickListener {
             dismiss()
         }
+
     }
 }

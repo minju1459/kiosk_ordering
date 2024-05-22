@@ -22,5 +22,20 @@ class DialogHotOption :
         binding.btnOptionQuit.setOnSingleClickListener {
             dismiss()
         }
+
+        binding.layoutTallSize.setOnSingleClickListener {
+            viewModel.updateSizeText("Tall Size")
+            binding.layoutTallSize.setBackgroundResource(R.color.yello_main_300)
+        }
+
+        binding.layoutGrandeSize.setOnSingleClickListener {
+            viewModel.updateSizeText("Grande Size")
+            binding.layoutGrandeSize.setBackgroundResource(R.color.yello_main_300)
+        }
+
+        binding.layoutVentiSize.setOnSingleClickListener {
+            viewModel.updateSizeText("Venti Size")
+            binding.layoutVentiSize.setBackgroundResource(R.color.yello_main_300)
+        }
     }
 }

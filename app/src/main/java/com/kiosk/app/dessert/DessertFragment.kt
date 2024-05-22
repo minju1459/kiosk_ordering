@@ -36,17 +36,17 @@ class DessertFragment : BindingFragment<FragmentDessertBinding>(R.layout.fragmen
 
     private fun getItems(): List<Item> {
         return listOf(
-            Item(R.drawable.ic_main_delete, "g기 라떼", 3500, 1),
-            Item(R.drawable.ic_main_delete, "딸기 라떼", 3500, 1),
-            Item(R.drawable.ic_main_delete, "딸기 라떼", 3500, 1),
-            Item(R.drawable.ic_main_delete, "딸기 라떼", 3500, 1),
-            Item(R.drawable.ic_main_delete, "딸기 라떼", 3500, 1),
-            Item(R.drawable.ic_main_delete, "딸기 라떼", 3500, 1),
-            Item(R.drawable.ic_main_delete, "딸기 라떼", 3500, 1),
-            Item(R.drawable.ic_main_delete, "딸기 라떼", 3500, 1),
-            Item(R.drawable.ic_main_delete, "딸기 라떼", 3500, 1),
-            Item(R.drawable.ic_main_delete, "딸기 라떼", 3500, 1),
-            Item(R.drawable.ic_main_delete, "딸기 라떼", 3500, 1),
+            Item(R.drawable.ic_main_delete, "g기 라떼", 3500, 1, "Tall Size", false, false, false),
+            Item(R.drawable.ic_main_delete, "딸기 라떼", 3500, 1, "Tall Size", false, false, false),
+            Item(R.drawable.ic_main_delete, "딸기 라떼", 3500, 1, "Tall Size", false, false, false),
+            Item(R.drawable.ic_main_delete, "딸기 라떼", 3500, 1, "Tall Size", false, false, false),
+            Item(R.drawable.ic_main_delete, "딸기 라떼", 3500, 1, "Tall Size", false, false, false),
+            Item(R.drawable.ic_main_delete, "딸기 라떼", 3500, 1, "Tall Size", false, false, false),
+            Item(R.drawable.ic_main_delete, "딸기 라떼", 3500, 1, "Tall Size", false, false, false),
+            Item(R.drawable.ic_main_delete, "딸기 라떼", 3500, 1, "Tall Size", false, false, false),
+            Item(R.drawable.ic_main_delete, "딸기 라떼", 3500, 1, "Tall Size", false, false, false),
+            Item(R.drawable.ic_main_delete, "딸기 라떼", 3500, 1, "Tall Size", false, false, false),
+            Item(R.drawable.ic_main_delete, "딸기 라떼", 3500, 1, "Tall Size", false, false, false),
         )
     }
 }

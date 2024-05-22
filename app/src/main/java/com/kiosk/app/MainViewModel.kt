@@ -10,8 +10,15 @@ class MainViewModel : ViewModel() {
     val selectedItem: LiveData<Item>
         get() = _selectedItem
 
+    private val _selectedSize = MutableLiveData<String>()
+    val selectedSize: LiveData<String> get() = _selectedSize
+
     fun setSelectedItem(item: Item) {
         _selectedItem.value = item
+    }
+
+    fun updateSizeText(size: String) {
+        _selectedSize.value = size
     }
 
     private val _totalItemCount = MutableLiveData<Int>()
@@ -22,7 +29,7 @@ class MainViewModel : ViewModel() {
 
     fun updateTotal(items: List<Item>) {
         val totalCount = items.sumOf { it.count }
-        val totalPrice = items.sumOf { it.basePrice * it.count }
+        val totalPrice = items.sumOf { it.price * it.count }
         _totalItemCount.value = totalCount
         _totalItemPrice.value = totalPrice
     }
