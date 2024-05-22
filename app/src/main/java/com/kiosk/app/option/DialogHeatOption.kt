@@ -22,6 +22,12 @@ class DialogHeatOption :
         binding.btnOptionQuit.setOnSingleClickListener {
             dismiss()
         }
+        binding.layoutReheat.setOnSingleClickListener {
+            binding.layoutReheat.setBackgroundResource(R.color.yello_main_300)
+        }
 
+        binding.layoutNonReheat.setOnSingleClickListener {
+            binding.layoutNonReheat.setBackgroundResource(R.color.yello_main_300)
+        }
     }
 }
