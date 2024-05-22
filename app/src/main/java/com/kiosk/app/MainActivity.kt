@@ -1,5 +1,6 @@
 package com.kiosk.app
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
@@ -9,6 +10,7 @@ import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.kiosk.app.databinding.ActivityMainBinding
 import com.kiosk.app.util.binding.BindingActivity
+import com.sopt.instagram.util.extension.setOnSingleClickListener
 
 class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main) {
 
@@ -55,5 +57,9 @@ class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main
                 binding.tvTotalPrice.text = totalPrice.toString()
             },
         )
+        binding.btnPayCard.setOnSingleClickListener {
+            val dialog = DialogPayCard()
+            dialog.show(supportFragmentManager, "DialogPayCard")
+        }
     }
 }
