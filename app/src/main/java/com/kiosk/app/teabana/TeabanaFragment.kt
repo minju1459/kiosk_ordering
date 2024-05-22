@@ -22,7 +22,7 @@ class TeabanaFragment : BindingFragment<FragmentTeabanaBinding>(R.layout.fragmen
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.rvTeabana.layoutManager = GridLayoutManager(context, 4)
-        _adapter = TeabanaAdapter(viewModel,::showDialog)
+        _adapter = TeabanaAdapter(viewModel, ::showDialog)
         binding.rvTeabana.adapter = adapter
         val items = getItems()
         adapter.submitList(items)
@@ -35,15 +35,15 @@ class TeabanaFragment : BindingFragment<FragmentTeabanaBinding>(R.layout.fragmen
 
     private fun getItems(): List<Item> {
         return listOf(
-            Item(R.drawable.ic_main_delete, "xlqkek 라떼", "3500원"),
-            Item(R.drawable.ic_main_delete, "딸기 라떼", "3500원"),
-            Item(R.drawable.ic_main_delete, "딸기 라떼", "3500원"),
-            Item(R.drawable.ic_main_delete, "딸기 라떼", "3500원"),
-            Item(R.drawable.ic_main_delete, "딸기 라떼", "3500원"),
-            Item(R.drawable.ic_main_delete, "딸기 라떼", "3500원"),
-            Item(R.drawable.ic_main_delete, "딸기 라떼", "3500원"),
-            Item(R.drawable.ic_main_delete, "딸기 라떼", "3500원"),
-            Item(R.drawable.ic_main_delete, "딸기 라떼", "3500원"),
+            Item(R.drawable.ic_main_delete, "xlqkek 라떼", "3500원", 1),
+            Item(R.drawable.ic_main_delete, "딸기 라떼", "3500원", 1),
+            Item(R.drawable.ic_main_delete, "딸기 라떼", "3500원", 1),
+            Item(R.drawable.ic_main_delete, "딸기 라떼", "3500원", 1),
+            Item(R.drawable.ic_main_delete, "딸기 라떼", "3500원", 1),
+            Item(R.drawable.ic_main_delete, "딸기 라떼", "3500원", 1),
+            Item(R.drawable.ic_main_delete, "딸기 라떼", "3500원", 1),
+            Item(R.drawable.ic_main_delete, "딸기 라떼", "3500원", 1),
+            Item(R.drawable.ic_main_delete, "딸기 라떼", "3500원", 1),
         )
     }
 }

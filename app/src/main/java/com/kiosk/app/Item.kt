@@ -4,4 +4,5 @@ data class Item(
     val image: Int,
     val name: String,
     val price: String,
+    val count: Int,
 )
