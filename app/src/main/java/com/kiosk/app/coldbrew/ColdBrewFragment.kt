@@ -34,15 +34,14 @@ class ColdBrewFragment : BindingFragment<FragmentColdbrewBinding>(R.layout.fragm
 
     private fun getItems(): List<Item> {
         return listOf(
-            Item(R.drawable.ic_main_delete, "딸기 라떼", 3500, 1, "Tall",false,false,false),
-            Item(R.drawable.ic_main_delete, "딸기 라떼", 3500, 1, "Tall",false,false,false),
-            Item(R.drawable.ic_main_delete, "딸기 라떼", 3500, 1, "Tall",false,false,false),
-            Item(R.drawable.ic_main_delete, "딸기 라떼", 3500, 1, "Tall",false,false,false),
-            Item(R.drawable.ic_main_delete, "딸기 라떼", 3500, 1, "Tall",false,false,false),
-            Item(R.drawable.ic_main_delete, "딸기 라떼", 3500, 1, "Tall",false,false,false),
-            Item(R.drawable.ic_main_delete, "딸기 라떼", 3500, 1, "Tall",false,false,false),
-            Item(R.drawable.ic_main_delete, "딸기 라떼", 3500, 1, "Tall",false,false,false),
-            Item(R.drawable.ic_main_delete, "딸기 라떼", 3500, 1, "Tall",false,false,false),
+            Item(R.drawable.img_cold_brew, "(ICE)콜드 브루", 4900, 1, "Tall",false,false,false),
+            Item(R.drawable.img_ot_cold, "(ICE)오트 콜드 브루", 5800, 1, "Tall",false,false,false),
+            Item(R.drawable.img_dolche_cold, "(ICE)돌체 콜드 브루", 6000, 1, "Tall",false,false,false),
+            Item(R.drawable.img_vanilla_cold, "(ICE)바닐라 크림 콜드 브루", 5800, 1, "Tall",false,false,false),
+            Item(R.drawable.img_nitro_vanilla, "(ICE)나이트로 바닐라 크림", 6100, 1, "Tall",false,false,false),
+            Item(R.drawable.img_nitro, "(ICE)나이트로 콜드 브루", 6000, 1, "Tall",false,false,false),
+            Item(R.drawable.img_jeju, "(ICE)제주 비자림 콜드 브루", 6800, 1, "Tall",false,false,false),
+            Item(R.drawable.img_yeosu, "(ICE)여수 윤슬 헤이즐넛", 7500, 1, "Tall",false,false,false),
         )
     }
 }
