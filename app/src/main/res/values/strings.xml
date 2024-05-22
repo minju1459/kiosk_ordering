@@ -33,4 +33,14 @@
     <string name="option_btn_non_reheat">데우지\n않음</string>
     <string name="option_btn_end">완료</string>
     <string name="item_tv_price">원</string>
+    <string name="pay_tv_ttitle">카드 결제</string>
+    <string name="pay_tv_sub_ttile">다음 그림과 같이 \n신용 / 체크 카드를 넣어주세요</string>
+    <string name="pay_tv_total_price">총 결제 금액</string>
+    <string name="pay_total_one">원</string>
+    <string name="pay_tv_pay_month">할부 개월</string>
+    <string name="pay_tv_pay_once">일시불</string>
+    <string name="pay_tv_card_info">카드 번호</string>
+    <string name="pay_tv_card_number">1234 **** **** 2345</string>
+    <string name="pay_btn_cancel">취소</string>
+    <string name="pay_btn_approve">승인 요청</string>
 </resources>
