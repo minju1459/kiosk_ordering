@@ -55,21 +55,22 @@ class SelectMenuAdapter(private val viewModel: MainViewModel) :
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: Item) {
-            binding.tvSelectMenu.text = item.name
-            binding.tvMenuPrice.text = item.price.toString()
-            binding.tvMenuCount.text = item.count.toString()
-            binding.tvSizeOption.text = item.size
-
-            binding.btnPlus.setOnSingleClickListener {
-                updateItemCount(adapterPosition, item.count + 1)
-            }
-            binding.btnMinus.setOnSingleClickListener {
-                if (item.count > 1) {
-                    updateItemCount(adapterPosition, item.count - 1)
+            with(binding) {
+                tvSelectMenu.text = item.name
+                tvMenuPrice.text = item.price.toString()
+                tvMenuCount.text = item.count.toString()
+                tvSizeOption.text = item.size
+                btnPlus.setOnSingleClickListener {
+                    updateItemCount(adapterPosition, item.count + 1)
                 }
-            }
-            binding.btnDeleteMenu.setOnSingleClickListener {
-                removeItem(adapterPosition)
+                btnMinus.setOnSingleClickListener {
+                    if (item.count > 1) {
+                        updateItemCount(adapterPosition, item.count - 1)
+                    }
+                }
+                btnDeleteMenu.setOnSingleClickListener {
+                    removeItem(adapterPosition)
+                }
             }
 
             viewModel.selectedSize.observe(binding.root.context as MainActivity) { size ->

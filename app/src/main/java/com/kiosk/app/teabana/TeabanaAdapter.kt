@@ -40,12 +40,14 @@ class TeabanaAdapter(
         private val showDialog: (Item) -> Unit,
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: Item) {
-            binding.ivTeabanaMenu.setImageResource(item.image)
-            binding.tvTeabanaName.text = item.name
-            binding.tvTeabanaPrice.text = item.price.toString()
-            binding.layoutTeabanaMenu.setOnSingleClickListener {
-                viewModel.setSelectedItem(item)
-                showDialog(item)
+            with(binding) {
+                ivTeabanaMenu.setImageResource(item.image)
+                tvTeabanaName.text = item.name
+                tvTeabanaPrice.text = item.price.toString()
+                layoutTeabanaMenu.setOnSingleClickListener {
+                    viewModel.setSelectedItem(item)
+                    showDialog(item)
+                }
             }
         }
     }

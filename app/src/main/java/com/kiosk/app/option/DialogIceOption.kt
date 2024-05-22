@@ -13,39 +13,29 @@ class DialogIceOption :
     BindingDialogFragment<DialogIceOptionBinding>(R.layout.dialog_ice_option) {
 
     private val viewModel by activityViewModels<MainViewModel>()
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel.selectedItem.observe(viewLifecycleOwner) { selectedItem ->
             binding.ivMenuImage.setImageResource(selectedItem.image)
         }
-        binding.btnOptionQuit.setOnSingleClickListener {
-            dismiss()
+
+        binding.btnOptionQuit.setOnSingleClickListener { dismiss() }
+        fun View.setOptionClickListener(sizeText: String? = null) {
+            setOnSingleClickListener {
+                setBackgroundResource(R.color.yello_main_300)
+                sizeText?.let { viewModel.updateSizeText(it) }
+            }
         }
 
-        binding.layoutTallSize.setOnSingleClickListener {
-            viewModel.updateSizeText("Tall Size")
-            binding.layoutTallSize.setBackgroundResource(R.color.yello_main_300)
-        }
-
-        binding.layoutGrandeSize.setOnSingleClickListener {
-            viewModel.updateSizeText("Grande Size")
-            binding.layoutGrandeSize.setBackgroundResource(R.color.yello_main_300)
-        }
-
-        binding.layoutVentiSize.setOnSingleClickListener {
-            viewModel.updateSizeText("Venti Size")
-            binding.layoutVentiSize.setBackgroundResource(R.color.yello_main_300)
-        }
-
-        binding.layoutEspresso.setOnSingleClickListener {
-            binding.layoutEspresso.setBackgroundResource(R.color.yello_main_300)
-        }
-        binding.layoutSyrub.setOnSingleClickListener {
-            binding.layoutSyrub.setBackgroundResource(R.color.yello_main_300)
-        }
-        binding.layoutCream.setOnSingleClickListener {
-            binding.layoutCream.setBackgroundResource(R.color.yello_main_300)
+        with(binding) {
+            layoutTallSize.setOptionClickListener("Tall Size")
+            layoutGrandeSize.setOptionClickListener("Grande Size")
+            layoutVentiSize.setOptionClickListener("Venti Size")
+            layoutEspresso.setOptionClickListener()
+            layoutSyrub.setOptionClickListener()
+            layoutCream.setOptionClickListener()
         }
     }
 }
