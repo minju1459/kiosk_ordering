@@ -26,9 +26,13 @@ class DialogPayCard(private val totalPrice: Int) : BindingDialogFragment<DialogP
                 Handler(Looper.getMainLooper()).postDelayed({
                     val intent = Intent(requireContext(), HomeActivity::class.java)
                     startActivity(intent)
-                    requireActivity().finish() // 현재 액티비티 종료
+                    requireActivity().finish()
                 }, 3000)
             }, 2000)
+        }
+
+        binding.btnCancel.setOnSingleClickListener {
+            dismiss()
         }
     }
 }

@@ -55,8 +55,8 @@ class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main
 
         binding.btnPayCard.setOnSingleClickListener {
             val totalPrice = viewModel.totalItemPrice.value ?: 0
-            val dialog = DialogPayCard(totalPrice)
-            dialog.show(supportFragmentManager, "DialogPayCard")
+            val dialog = DialogPayMethod(totalPrice)
+            dialog.show(supportFragmentManager, "DialogPayMethod")
         }
     }
 }
