@@ -288,7 +288,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:layout_gravity="right"
-                    android:background="@color/grayscales_600"
+                    android:background="#254636"
+                    android:textColor="@color/white"
                     android:fontFamily="@font/pretendard_semibold"
                     android:text="@string/option_btn_end"
                     android:textSize="17sp" />
