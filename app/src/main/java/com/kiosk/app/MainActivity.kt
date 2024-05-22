@@ -1,5 +1,6 @@
 package com.kiosk.app
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -57,6 +58,11 @@ class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main
             val totalPrice = viewModel.totalItemPrice.value ?: 0
             val dialog = DialogPayMethod(totalPrice)
             dialog.show(supportFragmentManager, "DialogPayMethod")
+        }
+
+        binding.btnBackHome.setOnSingleClickListener {
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
         }
     }
 }
