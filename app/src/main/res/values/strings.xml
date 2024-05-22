@@ -43,4 +43,7 @@
     <string name="pay_tv_card_number">1234 **** **** 2345</string>
     <string name="pay_btn_cancel">취소</string>
     <string name="pay_btn_approve">승인 요청</string>
+    <string name="home_tv_warning">※ 환경부 제도 시행 | 매장 내 1회용품 사용 금지 \n 주문이 어려우시거나 현금 결제 등을 원하실 경우 직원을 통해 결제 바랍니다.</string>
+    <string name="pay_method_tv_cash">현금</string>
+    <string name="pay_method_tv_card">카드</string>
 </resources>

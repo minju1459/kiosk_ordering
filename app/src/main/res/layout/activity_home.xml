@@ -102,7 +102,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:text="※ 환경부 제도 시행 | 매장 내 1회용품 사용 금지 \n 주문이 어려우시거나 현금 결제 등을 원하실 경우 직원을 통해 결제 바랍니다."
+            android:text="@string/home_tv_warning"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="11sp" />

@@ -65,7 +65,7 @@
                     android:id="@+id/tv_store"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="현금"
+                    android:text="@string/pay_method_tv_cash"
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textSize="18sp" />
@@ -96,7 +96,7 @@
                     android:id="@+id/tv_take_out"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="카드"
+                    android:text="@string/pay_method_tv_card"
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textSize="18sp" />
