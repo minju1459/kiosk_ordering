@@ -26,6 +26,9 @@ class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main
         observeViewModel()
         binding.btnPayCard.setOnSingleClickListener { showPaymentDialog() }
         binding.btnBackHome.setOnSingleClickListener { navigateToHome() }
+        binding.btnTotalRemove.setOnSingleClickListener {
+            adapter.clearItems()
+        }
     }
 
     private fun setupViewPagerAndTabLayout() {

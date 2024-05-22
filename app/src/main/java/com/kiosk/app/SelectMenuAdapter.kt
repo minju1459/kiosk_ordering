@@ -50,6 +50,10 @@ class SelectMenuAdapter(private val viewModel: MainViewModel) :
         viewModel.updateTotal(items)
     }
 
+    fun clearItems() {
+        items.clear() // 아이템 제거
+        notifyDataSetChanged() // 화면 갱신
+    }
     inner class SelectMenuViewHolder(
         private val binding: ItemSelectMenuBinding,
     ) : RecyclerView.ViewHolder(binding.root) {
