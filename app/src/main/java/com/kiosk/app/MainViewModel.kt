@@ -29,7 +29,7 @@ class MainViewModel : ViewModel() {
 
     fun updateTotal(items: List<Item>) {
         val totalCount = items.sumOf { it.count }
-        val totalPrice = items.sumOf { it.price * it.count }
+        val totalPrice = items.sumOf { it.basePrice * it.count }
         _totalItemCount.value = totalCount
         _totalItemPrice.value = totalPrice
     }
