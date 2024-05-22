@@ -1,8 +1,10 @@
-package com.kiosk.app
+package com.kiosk.app.pay
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.activityViewModels
+import com.kiosk.app.MainViewModel
+import com.kiosk.app.R
 import com.kiosk.app.databinding.DialogPayMethodBinding
 import com.kiosk.app.util.binding.BindingDialogFragment
 import com.sopt.instagram.util.extension.setOnSingleClickListener

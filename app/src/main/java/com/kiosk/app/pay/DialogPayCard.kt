@@ -1,4 +1,4 @@
-package com.kiosk.app
+package com.kiosk.app.pay
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,9 @@ import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
+import com.kiosk.app.HomeActivity
+import com.kiosk.app.MainViewModel
+import com.kiosk.app.R
 import com.kiosk.app.databinding.DialogPayCardBinding
 import com.kiosk.app.util.binding.BindingDialogFragment
 import com.sopt.instagram.util.extension.setOnSingleClickListener

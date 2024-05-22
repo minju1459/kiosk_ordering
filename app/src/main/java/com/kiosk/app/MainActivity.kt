@@ -6,6 +6,7 @@ import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.tabs.TabLayoutMediator
 import com.kiosk.app.databinding.ActivityMainBinding
+import com.kiosk.app.pay.DialogPayMethod
 import com.kiosk.app.util.binding.BindingActivity
 import com.sopt.instagram.util.extension.setOnSingleClickListener
 
