@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.kiosk.app.databinding.ItemSelectMenuBinding
+import com.sopt.instagram.util.extension.setOnSingleClickListener
 
 class SelectMenuAdapter : RecyclerView.Adapter<SelectMenuAdapter.SelectMenuViewHolder>() {
 
@@ -22,7 +23,7 @@ class SelectMenuAdapter : RecyclerView.Adapter<SelectMenuAdapter.SelectMenuViewH
 
     fun addItems(newItems: List<Item>) {
         items.addAll(newItems)
-        notifyDataSetChanged()  // Consider using more efficient methods if large data set is added
+        notifyDataSetChanged()
     }
 
     private fun updateItemCount(position: Int, newCount: Int) {
@@ -30,6 +31,14 @@ class SelectMenuAdapter : RecyclerView.Adapter<SelectMenuAdapter.SelectMenuViewH
             val updatedItem = items[position].copy(count = newCount)
             items[position] = updatedItem
             notifyItemChanged(position, updatedItem)
+        }
+    }
+
+    private fun removeItem(position: Int) {
+        if (position in items.indices) {
+            items.removeAt(position)
+            notifyItemRemoved(position)
+            notifyItemRangeChanged(position, items.size)
         }
     }
 
@@ -42,14 +51,16 @@ class SelectMenuAdapter : RecyclerView.Adapter<SelectMenuAdapter.SelectMenuViewH
             binding.tvMenuPrice.text = item.price
             binding.tvMenuCount.text = item.count.toString()
 
-            binding.btnPlus.setOnClickListener {
+            binding.btnPlus.setOnSingleClickListener {
                 updateItemCount(adapterPosition, item.count + 1)
             }
-
-            binding.btnMinus.setOnClickListener {
+            binding.btnMinus.setOnSingleClickListener {
                 if (item.count > 1) {
                     updateItemCount(adapterPosition, item.count - 1)
                 }
+            }
+            binding.btnDeleteMenu.setOnSingleClickListener {
+                removeItem(adapterPosition)
             }
         }
     }
