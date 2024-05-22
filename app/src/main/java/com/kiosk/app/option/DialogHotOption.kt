@@ -37,5 +37,16 @@ class DialogHotOption :
             viewModel.updateSizeText("Venti Size")
             binding.layoutVentiSize.setBackgroundResource(R.color.yello_main_300)
         }
+
+        binding.layoutEspresso.setOnSingleClickListener {
+            binding.layoutEspresso.setBackgroundResource(R.color.yello_main_300)
+        }
+
+        binding.layoutSyrub.setOnSingleClickListener {
+            binding.layoutSyrub.setBackgroundResource(R.color.yello_main_300)
+        }
+        binding.layoutCream.setOnSingleClickListener {
+            binding.layoutCream.setBackgroundResource(R.color.yello_main_300)
+        }
     }
 }
