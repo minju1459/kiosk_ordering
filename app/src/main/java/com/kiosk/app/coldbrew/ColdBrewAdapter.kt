@@ -56,7 +56,7 @@ class ColdBrewAdapter(
 
     companion object {
         private val diffUtil = DiffCallback<Item>(
-            onItemsTheSame = { old, new -> old == new }, // Assuming Item has an 'id' field
+            onItemsTheSame = { old, new -> old == new },
             onContentsTheSame = { old, new -> old == new },
         )
     }
