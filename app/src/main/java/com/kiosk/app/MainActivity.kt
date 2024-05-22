@@ -1,6 +1,5 @@
 package com.kiosk.app
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
@@ -58,7 +57,8 @@ class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main
             },
         )
         binding.btnPayCard.setOnSingleClickListener {
-            val dialog = DialogPayCard()
+            val totalPrice = viewModel.totalItemPrice.value ?: 0
+            val dialog = DialogPayCard(totalPrice)
             dialog.show(supportFragmentManager, "DialogPayCard")
         }
     }
