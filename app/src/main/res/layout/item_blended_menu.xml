@@ -19,10 +19,8 @@
 
             <ImageView
                 android:id="@+id/iv_blended_menu"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:padding="16dp"
-                android:src="@drawable/ic_main_delete" />
+                android:layout_width="80dp"
+                android:layout_height="80dp"/>
 
             <TextView
                 android:id="@+id/tv_blended_name"
