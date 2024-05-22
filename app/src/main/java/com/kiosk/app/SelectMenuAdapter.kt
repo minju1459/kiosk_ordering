@@ -48,7 +48,7 @@ class SelectMenuAdapter : RecyclerView.Adapter<SelectMenuAdapter.SelectMenuViewH
 
         fun bind(item: Item) {
             binding.tvSelectMenu.text = item.name
-            binding.tvMenuPrice.text = item.price
+            binding.tvMenuPrice.text = item.price.toString()
             binding.tvMenuCount.text = item.count.toString()
 
             binding.btnPlus.setOnSingleClickListener {

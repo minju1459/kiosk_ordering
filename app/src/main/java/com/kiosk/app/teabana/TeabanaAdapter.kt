@@ -38,7 +38,7 @@ class TeabanaAdapter(
         fun bind(item: Item) {
             binding.ivTeabanaMenu.setImageResource(item.image)
             binding.tvTeabanaName.text = item.name
-            binding.tvTeabanaPrice.text = item.price
+            binding.tvTeabanaPrice.text = item.price.toString()
             binding.layoutTeabanaMenu.setOnSingleClickListener {
                 viewModel.setSelectedItem(item)
                 showDialog()
@@ -48,7 +48,7 @@ class TeabanaAdapter(
 
     companion object {
         private val diffUtil = DiffCallback<Item>(
-            onItemsTheSame = { old, new -> old == new }, // Assuming Item has an 'id' field
+            onItemsTheSame = { old, new -> old == new },
             onContentsTheSame = { old, new -> old == new },
         )
     }

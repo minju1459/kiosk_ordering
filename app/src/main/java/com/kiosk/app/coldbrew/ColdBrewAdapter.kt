@@ -46,7 +46,7 @@ class ColdBrewAdapter(
         fun bind(item: Item) {
             binding.ivColdbrewMenu.setImageResource(item.image)
             binding.tvColdbrewName.text = item.name
-            binding.tvColdbrewPrice.text = item.price
+            binding.tvColdbrewPrice.text = item.price.toString()
             binding.layoutColdbrewMenu.setOnSingleClickListener {
                 viewModel.setSelectedItem(item)
                 showDialog()

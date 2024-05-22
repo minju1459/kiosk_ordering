@@ -147,7 +147,7 @@
             android:fontFamily="@font/pretendard_bold"
             android:textColor="@color/black"
             android:textSize="11sp"
-            tools:text="원" />
+            android:text="원" />
 
     </LinearLayout>
 

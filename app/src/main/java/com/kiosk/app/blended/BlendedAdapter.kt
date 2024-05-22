@@ -43,7 +43,7 @@ class BlendedAdapter(
         fun bind(item: Item) {
             binding.ivBlendedMenu.setImageResource(item.image)
             binding.tvBlendedName.text = item.name
-            binding.tvBlendedPrice.text = item.price
+            binding.tvBlendedPrice.text = item.price.toString()
             binding.layoutBlendedMenu.setOnSingleClickListener {
                 viewModel.setSelectedItem(item)
                 showDialog()

@@ -39,7 +39,7 @@ class DessertAdapter(
         fun bind(item: Item) {
             binding.ivDessertMenu.setImageResource(item.image)
             binding.tvDessertName.text = item.name
-            binding.tvDessertPrice.text = item.price
+            binding.tvDessertPrice.text = item.price.toString()
             binding.layoutDessertMenu.setOnSingleClickListener {
                 viewModel.setSelectedItem(item)
                 showDialog()

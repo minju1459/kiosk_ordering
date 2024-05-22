@@ -43,10 +43,10 @@ class EspressoAdapter(
         fun bind(item: Item) {
             binding.ivEspressoMenu.setImageResource(item.image)
             binding.tvEspressoName.text = item.name
-            binding.tvEspressoPrice.text = item.price
+            binding.tvEspressoPrice.text = item.price.toString()
             binding.layoutEspressoMenu.setOnSingleClickListener {
                 viewModel.setSelectedItem(item)
-                showDialog(item) // 클릭한 아이템을 showDialog 함수에 전달
+                showDialog(item)
             }
         }
     }
