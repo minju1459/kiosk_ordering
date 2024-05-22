@@ -6,12 +6,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.kiosk.app.databinding.ItemSelectMenuBinding
 import com.sopt.instagram.util.extension.setOnSingleClickListener
 
-class SelectMenuAdapter : RecyclerView.Adapter<SelectMenuAdapter.SelectMenuViewHolder>() {
+class SelectMenuAdapter(private val viewModel: MainViewModel) :
+    RecyclerView.Adapter<SelectMenuAdapter.SelectMenuViewHolder>() {
 
     private val items: MutableList<Item> = mutableListOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SelectMenuViewHolder {
-        val binding = ItemSelectMenuBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding =
+            ItemSelectMenuBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return SelectMenuViewHolder(binding)
     }
 
@@ -24,6 +26,7 @@ class SelectMenuAdapter : RecyclerView.Adapter<SelectMenuAdapter.SelectMenuViewH
     fun addItems(newItems: List<Item>) {
         items.addAll(newItems)
         notifyDataSetChanged()
+        updateTotal()
     }
 
     private fun updateItemCount(position: Int, newCount: Int) {
@@ -31,14 +34,7 @@ class SelectMenuAdapter : RecyclerView.Adapter<SelectMenuAdapter.SelectMenuViewH
             val updatedItem = items[position].copy(count = newCount)
             items[position] = updatedItem
             notifyItemChanged(position, updatedItem)
-        }
-    }
-
-    private fun updateItemPrice(position: Int, newPrice: Int) {
-        if (position in items.indices) {
-            val updatedItem = items[position].copy(price = newPrice)
-            items[position] = updatedItem
-            notifyItemChanged(position)
+            updateTotal()
         }
     }
 
@@ -47,7 +43,12 @@ class SelectMenuAdapter : RecyclerView.Adapter<SelectMenuAdapter.SelectMenuViewH
             items.removeAt(position)
             notifyItemRemoved(position)
             notifyItemRangeChanged(position, items.size)
+            updateTotal()
         }
+    }
+
+    private fun updateTotal() {
+        viewModel.updateTotal(items)
     }
 
     inner class SelectMenuViewHolder(
@@ -61,12 +62,10 @@ class SelectMenuAdapter : RecyclerView.Adapter<SelectMenuAdapter.SelectMenuViewH
 
             binding.btnPlus.setOnSingleClickListener {
                 updateItemCount(adapterPosition, item.count + 1)
-                updateItemPrice(adapterPosition, item.price * 2)
             }
             binding.btnMinus.setOnSingleClickListener {
                 if (item.count > 1) {
                     updateItemCount(adapterPosition, item.count - 1)
-                    updateItemPrice(adapterPosition, item.price / 2)
                 }
             }
             binding.btnDeleteMenu.setOnSingleClickListener {

@@ -13,4 +13,17 @@ class MainViewModel : ViewModel() {
     fun setSelectedItem(item: Item) {
         _selectedItem.value = item
     }
+
+    private val _totalItemCount = MutableLiveData<Int>()
+    val totalItemCount: LiveData<Int> get() = _totalItemCount
+
+    private val _totalItemPrice = MutableLiveData<Int>()
+    val totalItemPrice: LiveData<Int> get() = _totalItemPrice
+
+    fun updateTotal(items: List<Item>) {
+        val totalCount = items.sumOf { it.count }
+        val totalPrice = items.sumOf { it.basePrice * it.count }
+        _totalItemCount.value = totalCount
+        _totalItemPrice.value = totalPrice
+    }
 }

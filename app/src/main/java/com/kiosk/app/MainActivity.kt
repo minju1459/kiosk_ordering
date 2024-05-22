@@ -2,6 +2,7 @@ package com.kiosk.app
 
 import android.os.Bundle
 import androidx.activity.viewModels
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
@@ -24,21 +25,35 @@ class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main
         val tabLayout: TabLayout = binding.toolbarMenu
         val recyclerView = binding.rvSelectMenu
 
-        val adapter = ViewPagerAdapter(this)
-        viewPager.adapter = adapter
+        val viewPagerAdapter = ViewPagerAdapter(this)
+        viewPager.adapter = viewPagerAdapter
 
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
-            tab.text = adapter.getPageTitle(position)
+            tab.text = viewPagerAdapter.getPageTitle(position)
         }.attach()
 
-        val selectMenuAdapter = SelectMenuAdapter()
+        _adapter = SelectMenuAdapter(viewModel)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = selectMenuAdapter
+        recyclerView.adapter = adapter
 
         viewModel.selectedItem.observe(this) { selectedItem ->
             selectedItem?.let {
-                selectMenuAdapter.addItems(listOf(it))
+                adapter.addItems(listOf(it))
             }
         }
+
+        viewModel.totalItemCount.observe(
+            this,
+            Observer { totalCount ->
+                binding.tvTotalCount.text = totalCount.toString()
+            },
+        )
+
+        viewModel.totalItemPrice.observe(
+            this,
+            Observer { totalPrice ->
+                binding.tvTotalPrice.text = totalPrice.toString()
+            },
+        )
     }
 }
