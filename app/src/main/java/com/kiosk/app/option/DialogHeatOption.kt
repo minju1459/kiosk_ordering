@@ -18,6 +18,7 @@ class DialogHeatOption :
 
         viewModel.selectedItem.observe(viewLifecycleOwner) { selectedItem ->
             binding.ivSelectMenu.setImageResource(selectedItem.image)
+            binding.tvMenuName.text = selectedItem.name
         }
         with(binding) {
             btnOptionQuit.setOnSingleClickListener { dismiss() }
