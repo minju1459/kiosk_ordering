@@ -67,7 +67,7 @@ class DialogPayCash(private var totalPrice: Int) :
                 Toast.makeText(context, "결제가 완료되었습니다.", Toast.LENGTH_LONG).show()
                 Handler(Looper.getMainLooper()).postDelayed({
                     navigateToHomeActivity()
-                }, 2000)
+                }, 1500)
             }
         } else {
             Toast.makeText(context, "총 금액보다 적은 금액을 입력하세요.", Toast.LENGTH_SHORT).show()
