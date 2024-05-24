@@ -2,6 +2,8 @@ package com.kiosk.app.pay
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
@@ -67,7 +69,9 @@ class DialogPayCash(private var totalPrice: Int) :
 
             if (totalPrice == 0) {
                 Toast.makeText(context, "결제가 완료되었습니다.", Toast.LENGTH_LONG).show()
-                navigateToHomeActivity()
+                Handler(Looper.getMainLooper()).postDelayed({
+                    navigateToHomeActivity()
+                }, 2000)
             }
         } else {
             Toast.makeText(context, "총 금액보다 적은 금액을 입력하세요.", Toast.LENGTH_SHORT).show()
