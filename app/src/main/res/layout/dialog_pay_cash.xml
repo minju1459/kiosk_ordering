@@ -99,9 +99,11 @@
 
             <EditText
                 android:id="@+id/tv_user_price"
-                android:layout_width="110dp"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:maxLines="1"
+                android:singleLine="true"
                 android:fontFamily="@font/pretendard_semibold"
                 android:paddingStart="10dp"
                 android:textColor="@color/semantic_red_500"
