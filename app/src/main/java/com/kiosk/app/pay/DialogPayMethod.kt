@@ -21,5 +21,10 @@ class DialogPayMethod(private val totalPrice: Int) :
             dialog.show(requireActivity().supportFragmentManager, "DialogPayCard")
             binding.btnCard.setBackgroundResource(R.color.yello_main_300)
         }
+        binding.btnCash.setOnSingleClickListener {
+            val dialog = DialogPayCash(totalPrice)
+            dialog.show(requireActivity().supportFragmentManager, "DialogPayCash")
+            binding.btnCash.setBackgroundResource(R.color.yello_main_300)
+        }
     }
 }

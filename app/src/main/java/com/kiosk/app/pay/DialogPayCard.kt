@@ -23,9 +23,7 @@ class DialogPayCard(private val totalPrice: Int) : BindingDialogFragment<DialogP
         super.onViewCreated(view, savedInstanceState)
         with(binding) {
             tvAmount.text = totalPrice.toString()
-
             btnCancel.setOnSingleClickListener { dismiss() }
-
             btnApprove.setOnSingleClickListener {
                 showToast("결제 승인 요청 중입니다.")
                 lifecycleScope.launch {
