@@ -8,7 +8,7 @@ import com.kiosk.app.Item
 import com.kiosk.app.MainViewModel
 import com.kiosk.app.R
 import com.kiosk.app.databinding.FragmentBlendedBinding
-import com.kiosk.app.option.DialogIceOption
+import com.kiosk.app.option.DialogDrinkOption
 import com.kiosk.app.util.binding.BindingFragment
 
 class BlendedFragment : BindingFragment<FragmentBlendedBinding>(R.layout.fragment_blended) {
@@ -29,8 +29,8 @@ class BlendedFragment : BindingFragment<FragmentBlendedBinding>(R.layout.fragmen
     }
 
     private fun showDialog() {
-        val dialog = DialogIceOption()
-        dialog.show(parentFragmentManager, "DialogIceOption")
+        val dialog = DialogDrinkOption()
+        dialog.show(parentFragmentManager, "DialogDrinkOption")
     }
 
     private fun getItems(): List<Item> {

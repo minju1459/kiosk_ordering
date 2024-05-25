@@ -8,7 +8,7 @@ import com.kiosk.app.Item
 import com.kiosk.app.MainViewModel
 import com.kiosk.app.R
 import com.kiosk.app.databinding.FragmentColdbrewBinding
-import com.kiosk.app.option.DialogIceOption
+import com.kiosk.app.option.DialogDrinkOption
 import com.kiosk.app.util.binding.BindingFragment
 
 class ColdBrewFragment : BindingFragment<FragmentColdbrewBinding>(R.layout.fragment_coldbrew) {
@@ -28,20 +28,20 @@ class ColdBrewFragment : BindingFragment<FragmentColdbrewBinding>(R.layout.fragm
     }
 
     private fun showDialog() {
-        val dialog = DialogIceOption()
-        dialog.show(parentFragmentManager, "DialogIceOption")
+        val dialog = DialogDrinkOption()
+        dialog.show(parentFragmentManager, "DialogDrinkOption")
     }
 
     private fun getItems(): List<Item> {
         return listOf(
-            Item(R.drawable.img_cold_brew, "(ICE)콜드 브루", 4900, 1, "Tall Size",false,false,false),
-            Item(R.drawable.img_ot_cold, "(ICE)오트 콜드 브루", 5800, 1, "Tall Size",false,false,false),
-            Item(R.drawable.img_dolche_cold, "(ICE)돌체 콜드 브루", 6000, 1, "Tall Size",false,false,false),
-            Item(R.drawable.img_vanilla_cold, "(ICE)바닐라 크림 콜드 브루", 5800, 1, "Tall Size",false,false,false),
-            Item(R.drawable.img_nitro_vanilla, "(ICE)나이트로 바닐라 크림", 6100, 1, "Tall Size",false,false,false),
-            Item(R.drawable.img_nitro, "(ICE)나이트로 콜드 브루", 6000, 1, "Tall Size",false,false,false),
-            Item(R.drawable.img_jeju, "(ICE)제주 비자림 콜드 브루", 6800, 1, "Tall Size",false,false,false),
-            Item(R.drawable.img_yeosu, "(ICE)여수 윤슬 헤이즐넛", 7500, 1, "Tall Size",false,false,false),
+            Item(R.drawable.img_cold_brew, "(ICE)콜드 브루", 4900, 1, "Tall Size", false, false, false),
+            Item(R.drawable.img_ot_cold, "(ICE)오트 콜드 브루", 5800, 1, "Tall Size", false, false, false),
+            Item(R.drawable.img_dolche_cold, "(ICE)돌체 콜드 브루", 6000, 1, "Tall Size", false, false, false),
+            Item(R.drawable.img_vanilla_cold, "(ICE)바닐라 크림 콜드 브루", 5800, 1, "Tall Size", false, false, false),
+            Item(R.drawable.img_nitro_vanilla, "(ICE)나이트로 바닐라 크림", 6100, 1, "Tall Size", false, false, false),
+            Item(R.drawable.img_nitro, "(ICE)나이트로 콜드 브루", 6000, 1, "Tall Size", false, false, false),
+            Item(R.drawable.img_jeju, "(ICE)제주 비자림 콜드 브루", 6800, 1, "Tall Size", false, false, false),
+            Item(R.drawable.img_yeosu, "(ICE)여수 윤슬 헤이즐넛", 7500, 1, "Tall Size", false, false, false),
         )
     }
 }

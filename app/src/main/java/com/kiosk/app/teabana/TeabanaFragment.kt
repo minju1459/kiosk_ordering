@@ -8,8 +8,7 @@ import com.kiosk.app.Item
 import com.kiosk.app.MainViewModel
 import com.kiosk.app.R
 import com.kiosk.app.databinding.FragmentTeabanaBinding
-import com.kiosk.app.option.DialogHotOption
-import com.kiosk.app.option.DialogIceOption
+import com.kiosk.app.option.DialogDrinkOption
 import com.kiosk.app.util.binding.BindingFragment
 
 class TeabanaFragment : BindingFragment<FragmentTeabanaBinding>(R.layout.fragment_teabana) {
@@ -23,28 +22,15 @@ class TeabanaFragment : BindingFragment<FragmentTeabanaBinding>(R.layout.fragmen
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.rvTeabana.layoutManager = GridLayoutManager(context, 4)
-        _adapter = TeabanaAdapter(viewModel) { item -> onItemClicked(item) }
+        _adapter = TeabanaAdapter(viewModel, ::showDialogOption)
         binding.rvTeabana.adapter = adapter
         val items = getItems()
         adapter.submitList(items)
     }
 
-    private fun onItemClicked(item: Item) {
-        if (item.name.contains("ICE")) {
-            showDialogIceOption()
-        } else if (item.name.contains("HOT")) {
-            showDialogHotOption()
-        }
-    }
-
-    private fun showDialogIceOption() {
-        val dialog = DialogIceOption()
-        dialog.show(parentFragmentManager, "DialogIceOption")
-    }
-
-    private fun showDialogHotOption() {
-        val dialog = DialogHotOption()
-        dialog.show(parentFragmentManager, "DialogHotOption")
+    private fun showDialogOption() {
+        val dialog = DialogDrinkOption()
+        dialog.show(parentFragmentManager, "DialogDrinkOption")
     }
 
     private fun getItems(): List<Item> {

@@ -12,7 +12,7 @@ import com.sopt.instagram.util.extension.setOnSingleClickListener
 
 class TeabanaAdapter(
     private val viewModel: MainViewModel,
-    private val showDialog: (Item) -> Unit,
+    private val showDialog: () -> Unit,
 ) : ListAdapter<Item, TeabanaAdapter.TeabanaViewHolder>(diffUtil) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TeabanaViewHolder {
@@ -37,7 +37,7 @@ class TeabanaAdapter(
     class TeabanaViewHolder(
         private val binding: ItemTeabanaMenuBinding,
         private val viewModel: MainViewModel,
-        private val showDialog: (Item) -> Unit,
+        private val showDialog: () -> Unit,
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: Item) {
             with(binding) {
@@ -46,7 +46,7 @@ class TeabanaAdapter(
                 tvTeabanaPrice.text = item.price.toString()
                 layoutTeabanaMenu.setOnSingleClickListener {
                     viewModel.setSelectedItem(item)
-                    showDialog(item)
+                    showDialog()
                 }
             }
         }

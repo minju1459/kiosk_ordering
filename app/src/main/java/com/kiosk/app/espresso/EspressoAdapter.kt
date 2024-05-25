@@ -12,7 +12,7 @@ import com.sopt.instagram.util.extension.setOnSingleClickListener
 
 class EspressoAdapter(
     private val viewModel: MainViewModel,
-    private val showDialog: (Item) -> Unit,
+    private val showDialog: () -> Unit,
 ) : ListAdapter<Item, EspressoAdapter.EspressoViewHolder>(diffUtil) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EspressoViewHolder {
@@ -37,7 +37,7 @@ class EspressoAdapter(
     class EspressoViewHolder(
         private val binding: ItemEspressoMenuBinding,
         private val viewModel: MainViewModel,
-        private val showDialog: (Item) -> Unit,
+        private val showDialog: () -> Unit,
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: Item) {
@@ -46,7 +46,7 @@ class EspressoAdapter(
             binding.tvEspressoPrice.text = item.price.toString()
             binding.layoutEspressoMenu.setOnSingleClickListener {
                 viewModel.setSelectedItem(item)
-                showDialog(item)
+                showDialog()
             }
         }
     }
