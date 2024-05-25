@@ -29,11 +29,13 @@ class DessertFragment : BindingFragment<FragmentDessertBinding>(R.layout.fragmen
         adapter.submitList(items)
     }
 
-    private fun showDialog(name: String, image: Int) {
+    private fun showDialog(name: String, image: Int, basePrice: Int, count: Int) {
         val dialog = DialogDrinkOption()
         val bundle = Bundle().apply {
             putString("name", name)
             putInt("image", image)
+            putInt("basePrice", basePrice)
+            putInt("count", count)
         }
         dialog.arguments = bundle
         dialog.show(parentFragmentManager, "DialogDrinkOption")

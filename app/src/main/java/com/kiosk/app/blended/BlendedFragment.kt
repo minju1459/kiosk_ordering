@@ -28,15 +28,18 @@ class BlendedFragment : BindingFragment<FragmentBlendedBinding>(R.layout.fragmen
         adapter.submitList(items)
     }
 
-    private fun showDialog(name: String, image: Int) {
+    private fun showDialog(name: String, image: Int, basePrice: Int, count: Int) {
         val dialog = DialogDrinkOption()
         val bundle = Bundle().apply {
             putString("name", name)
             putInt("image", image)
+            putInt("basePrice", basePrice)
+            putInt("count", count)
         }
         dialog.arguments = bundle
         dialog.show(parentFragmentManager, "DialogDrinkOption")
     }
+
     private fun getItems(): List<Item> {
         return listOf(
             Item(R.drawable.img_double_lemon, "더블 레몬 블렌디드", 6700, 1, "Tall Size", "", "", ""),

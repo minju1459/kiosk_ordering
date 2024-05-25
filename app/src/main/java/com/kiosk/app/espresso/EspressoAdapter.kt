@@ -10,7 +10,7 @@ import com.kiosk.app.util.DiffCallback
 import com.sopt.instagram.util.extension.setOnSingleClickListener
 
 class EspressoAdapter(
-    private val showDialog: (name: String, image: Int) -> Unit,
+    private val showDialog: (name: String, image: Int, basePrice: Int, count: Int) -> Unit,
 ) : ListAdapter<Item, EspressoAdapter.EspressoViewHolder>(diffUtil) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EspressoViewHolder {
@@ -28,15 +28,15 @@ class EspressoAdapter(
 
     class EspressoViewHolder(
         private val binding: ItemEspressoMenuBinding,
-        private val showDialog: (name: String, price: Int) -> Unit,
+        private val showDialog: (name: String, image: Int, basePrice: Int, count: Int) -> Unit,
     ) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(item: Item, showDialog: (name: String, image: Int) -> Unit) {
+        fun bind(item: Item, showDialog: (name: String, image: Int, basePrice: Int, count: Int) -> Unit) {
             binding.ivEspressoMenu.setImageResource(item.image)
             binding.tvEspressoName.text = item.name
             binding.tvEspressoPrice.text = item.price.toString()
             binding.layoutEspressoMenu.setOnSingleClickListener {
-                showDialog(item.name, item.image)
+                showDialog(item.name, item.image, item.basePrice, item.count)
             }
         }
     }

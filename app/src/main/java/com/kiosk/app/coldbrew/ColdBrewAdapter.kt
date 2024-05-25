@@ -10,7 +10,7 @@ import com.kiosk.app.util.DiffCallback
 import com.sopt.instagram.util.extension.setOnSingleClickListener
 
 class ColdBrewAdapter(
-    private val showDialog: (name: String, image: Int) -> Unit,
+    private val showDialog: (name: String, image: Int, basePrice: Int, count: Int) -> Unit,
 ) : ListAdapter<Item, ColdBrewAdapter.ColdBrewViewHolder>(diffUtil) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ColdBrewViewHolder {
@@ -30,16 +30,19 @@ class ColdBrewAdapter(
 
     class ColdBrewViewHolder(
         private val binding: ItemColdbrewMenuBinding,
-        private val showDialog: (name: String, price: Int) -> Unit,
+        private val showDialog: (name: String, image: Int, basePrice: Int, count: Int) -> Unit,
     ) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(item: Item, showDialog: (name: String, image: Int) -> Unit) {
+        fun bind(
+            item: Item,
+            showDialog: (name: String, image: Int, basePrice: Int, count: Int) -> Unit,
+        ) {
             binding.ivColdbrewMenu.setImageResource(item.image)
             binding.tvColdbrewName.text = item.name
             binding.tvColdbrewPrice.text = item.price.toString()
             binding.layoutColdbrewMenu.setOnSingleClickListener {
-                showDialog(item.name, item.image)
+                showDialog(item.name, item.image, item.basePrice, item.count)
             }
         }
     }

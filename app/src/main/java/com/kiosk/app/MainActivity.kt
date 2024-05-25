@@ -41,14 +41,14 @@ class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main
 
     private fun observeViewModel() {
         with(viewModel) {
-            selectedItem.observe(this@MainActivity) { selectedItem ->
-                selectedItem?.let { adapter.addItems(listOf(it)) }
-            }
             totalItemCount.observe(this@MainActivity) { totalCount ->
                 binding.tvTotalCount.text = totalCount.toString()
             }
             totalItemPrice.observe(this@MainActivity) { totalPrice ->
                 binding.tvTotalPrice.text = totalPrice.toString()
+            }
+            selectedItem.observe(this@MainActivity) { item ->
+                adapter.addItem(item)
             }
         }
     }

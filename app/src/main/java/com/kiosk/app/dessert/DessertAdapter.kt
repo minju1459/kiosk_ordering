@@ -10,14 +10,14 @@ import com.kiosk.app.util.DiffCallback
 import com.sopt.instagram.util.extension.setOnSingleClickListener
 
 class DessertAdapter(
-    private val showDialog: (name: String, image: Int) -> Unit,
+    private val showDialog: (name: String, image: Int, basePrice: Int, count: Int) -> Unit,
 ) : ListAdapter<Item, DessertAdapter.DessertViewHolder>(diffUtil) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DessertViewHolder {
         val binding = ItemDessertMenuBinding.inflate(
             LayoutInflater.from(parent.context),
             parent,
-            false
+            false,
         )
         return DessertViewHolder(binding, showDialog)
     }
@@ -28,14 +28,17 @@ class DessertAdapter(
 
     class DessertViewHolder(
         private val binding: ItemDessertMenuBinding,
-        private val showDialog: (name: String, price: Int) -> Unit,
+        private val showDialog: (name: String, image: Int, basePrice: Int, count: Int) -> Unit,
     ) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: Item, showDialog: (name: String, image: Int) -> Unit){
+        fun bind(
+            item: Item,
+            showDialog: (name: String, image: Int, basePrice: Int, count: Int) -> Unit,
+        ) {
             binding.ivDessertMenu.setImageResource(item.image)
             binding.tvDessertName.text = item.name
             binding.tvDessertPrice.text = item.price.toString()
             binding.layoutDessertMenu.setOnSingleClickListener {
-                showDialog(item.name, item.image)
+                showDialog(item.name, item.image, item.basePrice, item.count)
             }
         }
     }

@@ -10,7 +10,7 @@ import com.kiosk.app.util.DiffCallback
 import com.sopt.instagram.util.extension.setOnSingleClickListener
 
 class BlendedAdapter(
-    private val showDialog: (name: String, image: Int) -> Unit,
+    private val showDialog: (name: String, image: Int, basePrice: Int, count: Int) -> Unit,
 ) : ListAdapter<Item, BlendedAdapter.BlendedViewHolder>(diffUtil) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BlendedViewHolder {
@@ -25,17 +25,18 @@ class BlendedAdapter(
     override fun onBindViewHolder(holder: BlendedViewHolder, position: Int) {
         holder.bind(getItem(position), showDialog)
     }
+
     class BlendedViewHolder(
         private val binding: ItemBlendedMenuBinding,
-        private val showDialog: (name: String, price: Int) -> Unit,
+        private val showDialog: (name: String, image: Int, basePrice: Int, count: Int) -> Unit,
     ) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(item: Item, showDialog: (name: String, image: Int) -> Unit) {
+        fun bind(item: Item, showDialog: (name: String, image: Int, basePrice: Int, count: Int) -> Unit) {
             binding.ivBlendedMenu.setImageResource(item.image)
             binding.tvBlendedName.text = item.name
             binding.tvBlendedPrice.text = item.price.toString()
             binding.layoutBlendedMenu.setOnSingleClickListener {
-                showDialog(item.name, item.image)
+                showDialog(item.name, item.image, item.basePrice, item.count)
             }
         }
     }

@@ -18,10 +18,12 @@ class MainViewModel : ViewModel() {
     fun setSelectedItem(item: Item) {
         _selectedItem.value = item
     }
+
     fun updateTotal(items: List<Item>) {
         val totalCount = items.sumOf { it.count }
-        val totalPrice = items.sumOf { it.basePrice * it.count }
+        val totalPrice = items.sumOf { it.price }
         _totalItemCount.value = totalCount
         _totalItemPrice.value = totalPrice
     }
 }
+

@@ -12,7 +12,8 @@ class SelectMenuAdapter(private val viewModel: MainViewModel) :
     private val items: MutableList<Item> = mutableListOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SelectMenuViewHolder {
-        val binding = ItemSelectMenuBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding =
+            ItemSelectMenuBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return SelectMenuViewHolder(binding)
     }
 
@@ -22,9 +23,9 @@ class SelectMenuAdapter(private val viewModel: MainViewModel) :
 
     override fun getItemCount(): Int = items.size
 
-    fun addItems(newItems: List<Item>) {
-        items.addAll(newItems)
-        notifyDataSetChanged()
+    fun addItem(item: Item) {
+        items.add(item)
+        notifyItemInserted(items.size - 1)
         updateTotal()
     }
 
@@ -59,6 +60,10 @@ class SelectMenuAdapter(private val viewModel: MainViewModel) :
                 tvSelectMenu.text = item.name
                 tvMenuPrice.text = item.price.toString()
                 tvMenuCount.text = item.count.toString()
+                tvSize.text = item.size
+                tvShot.text = item.shot
+                tvSyrub.text = item.syrub
+                tvCream.text = item.cream
                 btnPlus.setOnSingleClickListener {
                     updateItemCount(adapterPosition, item.count + 1)
                 }
