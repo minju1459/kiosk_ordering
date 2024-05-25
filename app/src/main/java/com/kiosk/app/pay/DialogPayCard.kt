@@ -16,7 +16,6 @@ import com.kiosk.app.databinding.DialogPayCardBinding
 import com.kiosk.app.util.binding.BindingDialogFragment
 import com.sopt.instagram.util.extension.setOnSingleClickListener
 
-
 class DialogPayCard(private var totalPrice: Int) : BindingDialogFragment<DialogPayCardBinding>(R.layout.dialog_pay_card) {
 
     private val viewModel by activityViewModels<MainViewModel>()
@@ -72,6 +71,8 @@ class DialogPayCard(private var totalPrice: Int) : BindingDialogFragment<DialogP
                 Handler(Looper.getMainLooper()).postDelayed({
                     navigateToHomeActivity()
                 }, 1500)
+            } else {
+                Toast.makeText(context, "결제할 금액이 ${totalPrice}원 남았습니다.", Toast.LENGTH_SHORT).show()
             }
         } else {
             Toast.makeText(context, "총 금액보다 적은 금액을 입력하세요.", Toast.LENGTH_SHORT).show()
