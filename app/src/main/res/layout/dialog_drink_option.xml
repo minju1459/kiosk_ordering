@@ -104,7 +104,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/pretendard_bold"
-                    android:text="2. 샷 추가 (shot)"
+                    android:text="@string/option_shot_title"
                     android:textSize="16sp" />
 
                 <RadioGroup
@@ -119,7 +119,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:buttonTint="@color/grayscales_500"
-                        android:text="1샷 (기본)"
+                        android:text="@string/option_one_shot"
                         android:checked="true"
                         android:textSize="14sp" />
 
@@ -129,7 +129,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="2dp"
                         android:buttonTint="@color/grayscales_500"
-                        android:text="2샷"
+                        android:text="@string/option_two_shot"
                         android:textSize="14sp" />
 
                     <RadioButton
@@ -137,7 +137,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:buttonTint="@color/grayscales_500"
-                        android:text="3샷"
+                        android:text="@string/option_three_shot"
                         android:textSize="14sp" />
                 </RadioGroup>
 
@@ -145,7 +145,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="3. 시럽 추가 (syrub)"
+                    android:text="@string/option_syrub_title"
                     android:textSize="16sp"
                     android:fontFamily="@font/pretendard_bold"/>
 
@@ -161,7 +161,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:buttonTint="@color/grayscales_500"
-                        android:text="1샷 (기본)"
+                        android:text="@string/option_one_syrub"
                         android:checked="true"
                         android:textSize="14sp" />
 
@@ -170,7 +170,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:buttonTint="@color/grayscales_500"
-                        android:text="2샷"
+                        android:text="@string/option_two_syrub"
                         android:layout_marginHorizontal="2dp"
                         android:textSize="14sp" />
 
@@ -179,7 +179,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:buttonTint="@color/grayscales_500"
-                        android:text="3샷"
+                        android:text="@string/option_three_syrub"
                         android:textSize="14sp" />
                 </RadioGroup>
 
@@ -188,7 +188,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/pretendard_bold"
-                    android:text="4. 휘핑 크림 추가 (cream)"
+                    android:text="@string/option_cream_title"
                     android:textSize="16sp" />
 
                 <RadioGroup
@@ -203,7 +203,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:buttonTint="@color/grayscales_500"
-                        android:text="1번 (기본)"
+                        android:text="@string/option_one_cream"
                         android:checked="true"
                         android:textSize="14sp" />
 
@@ -212,7 +212,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:buttonTint="@color/grayscales_500"
-                        android:text="2번"
+                        android:text="@string/option_two_cream"
                         android:layout_marginHorizontal="2dp"
                         android:textSize="14sp" />
 
@@ -221,7 +221,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:buttonTint="@color/grayscales_500"
-                        android:text="3번"
+                        android:text="@string/option_three_cream"
                         android:textSize="14sp" />
                 </RadioGroup>
 
