@@ -14,7 +14,7 @@ class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main
 
     private val viewModel by viewModels<MainViewModel>()
 
-    private val adapter by lazy { SelectMenuAdapter(viewModel) }
+    private val adapter by lazy { SelectMenuAdapter(viewModel, supportFragmentManager) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

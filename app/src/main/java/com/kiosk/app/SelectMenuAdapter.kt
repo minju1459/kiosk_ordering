@@ -1,13 +1,18 @@
 package com.kiosk.app
 
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
 import com.kiosk.app.databinding.ItemSelectMenuBinding
+import com.kiosk.app.option.DialogDrinkOption
 import com.sopt.instagram.util.extension.setOnSingleClickListener
 
-class SelectMenuAdapter(private val viewModel: MainViewModel) :
-    RecyclerView.Adapter<SelectMenuAdapter.SelectMenuViewHolder>() {
+class SelectMenuAdapter(
+    private val viewModel: MainViewModel,
+    private val fragmentManager: FragmentManager // FragmentManager 추가
+) : RecyclerView.Adapter<SelectMenuAdapter.SelectMenuViewHolder>() {
 
     private val items: MutableList<Item> = mutableListOf()
 
@@ -75,7 +80,23 @@ class SelectMenuAdapter(private val viewModel: MainViewModel) :
                 btnDeleteMenu.setOnSingleClickListener {
                     removeItem(adapterPosition)
                 }
+                layoutSelectMenu.setOnSingleClickListener {
+                    showDialog(item)
+                    removeItem(adapterPosition)
+                }
             }
+        }
+
+        private fun showDialog(item: Item) {
+            val dialog = DialogDrinkOption().apply {
+                arguments = Bundle().apply {
+                    putInt("image", item.image)
+                    putString("name", item.name)
+                    putInt("count", item.count)
+                    putInt("basePrice", item.price)
+                }
+            }
+            dialog.show(fragmentManager, "DialogDrinkOption")
         }
     }
 }
