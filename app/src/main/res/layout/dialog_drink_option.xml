@@ -77,6 +77,7 @@
                         android:layout_height="wrap_content"
                         android:buttonTint="@color/grayscales_500"
                         android:text="@string/option_tv_tall_size"
+                        android:checked="true"
                         android:textSize="14sp" />
 
                     <RadioButton
@@ -116,7 +117,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:buttonTint="@color/grayscales_500"
-                        android:text="1샷"
+                        android:text="1샷 (기본)"
+                        android:checked="true"
                         android:textSize="14sp" />
 
                     <RadioButton
@@ -156,7 +158,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:buttonTint="@color/grayscales_500"
-                        android:text="1샷"
+                        android:text="1샷 (기본)"
+                        android:checked="true"
                         android:textSize="14sp" />
 
                     <RadioButton
@@ -196,7 +199,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:buttonTint="@color/grayscales_500"
-                        android:text="1번"
+                        android:text="1번 (기본)"
+                        android:checked="true"
                         android:textSize="14sp" />
 
                     <RadioButton
