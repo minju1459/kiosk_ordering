@@ -17,11 +17,13 @@ class DialogDrinkOption :
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel.selectedItem.observe(viewLifecycleOwner) { selectedItem ->
-            binding.ivMenuImage.setImageResource(selectedItem.image)
-            binding.tvMenuName.text = selectedItem.name
-        }
+        val image = arguments?.getInt("image", 0)
+        val name = arguments?.getString("name", "")
 
+        if (image != null) {
+            binding.ivMenuImage.setImageResource(image)
+        }
+        binding.tvMenuName.text = name
         binding.btnOptionQuit.setOnSingleClickListener { dismiss() }
     }
 }

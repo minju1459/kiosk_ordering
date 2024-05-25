@@ -5,14 +5,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.kiosk.app.Item
-import com.kiosk.app.MainViewModel
 import com.kiosk.app.databinding.ItemColdbrewMenuBinding
 import com.kiosk.app.util.DiffCallback
 import com.sopt.instagram.util.extension.setOnSingleClickListener
 
 class ColdBrewAdapter(
-    private val viewModel: MainViewModel,
-    private val showDialog: () -> Unit,
+    private val showDialog: (name: String, image: Int) -> Unit,
 ) : ListAdapter<Item, ColdBrewAdapter.ColdBrewViewHolder>(diffUtil) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ColdBrewViewHolder {
@@ -21,35 +19,27 @@ class ColdBrewAdapter(
             parent,
             false,
         )
-        return ColdBrewViewHolder(binding, viewModel, showDialog)
+        return ColdBrewViewHolder(binding, showDialog)
     }
 
     override fun onBindViewHolder(holder: ColdBrewViewHolder, position: Int) {
-        holder.bind(getItem(position))
-    }
-
-    fun addItems(newItems: List<Item>) {
-        val currentItems = currentList.toMutableList()
-        currentItems.addAll(newItems)
-        submitList(currentItems)
+        holder.bind(getItem(position), showDialog)
     }
 
     override fun getItemCount() = currentList.size
 
     class ColdBrewViewHolder(
         private val binding: ItemColdbrewMenuBinding,
-        private val viewModel: MainViewModel,
-        private val showDialog: () -> Unit,
+        private val showDialog: (name: String, price: Int) -> Unit,
     ) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(item: Item) {
+        fun bind(item: Item, showDialog: (name: String, image: Int) -> Unit) {
             binding.ivColdbrewMenu.setImageResource(item.image)
             binding.tvColdbrewName.text = item.name
             binding.tvColdbrewPrice.text = item.price.toString()
             binding.layoutColdbrewMenu.setOnSingleClickListener {
-                viewModel.setSelectedItem(item)
-                showDialog()
+                showDialog(item.name, item.image)
             }
         }
     }

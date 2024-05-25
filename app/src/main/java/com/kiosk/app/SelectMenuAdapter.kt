@@ -59,7 +59,6 @@ class SelectMenuAdapter(private val viewModel: MainViewModel) :
                 tvSelectMenu.text = item.name
                 tvMenuPrice.text = item.price.toString()
                 tvMenuCount.text = item.count.toString()
-                tvSizeOption.text = item.size
                 btnPlus.setOnSingleClickListener {
                     updateItemCount(adapterPosition, item.count + 1)
                 }
@@ -70,12 +69,6 @@ class SelectMenuAdapter(private val viewModel: MainViewModel) :
                 }
                 btnDeleteMenu.setOnSingleClickListener {
                     removeItem(adapterPosition)
-                }
-            }
-
-            viewModel.selectedSize.observe(binding.root.context as MainActivity) { size ->
-                if (item == viewModel.selectedItem.value) {
-                    binding.tvSizeOption.text = size
                 }
             }
         }

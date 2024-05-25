@@ -38,44 +38,13 @@
                 tools:text="바닐라 헤이즐넛 라떼" />
 
             <TextView
-                android:id="@+id/tv_size_option"
+                android:id="@+id/tv_select_option"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:fontFamily="@font/font_pretendard_regular"
-                tools:text="Tall Size"
-                android:textColor="@color/grayscales_600"
-                android:textSize="11sp" />
-
-            <TextView
-                android:id="@+id/tv_one_option"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="에스프레소 샷 추가"
-                android:fontFamily="@font/font_pretendard_regular"
-                android:textColor="@color/grayscales_600"
+                android:fontFamily="@font/font_pretendard_semibold"
+                android:textColor="@color/black"
                 android:textSize="11sp"
-                android:visibility="gone" />
-
-            <TextView
-                android:id="@+id/tv_two_option"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="시럽 추가"
-                android:fontFamily="@font/font_pretendard_regular"
-                android:textColor="@color/grayscales_600"
-                android:textSize="11sp"
-                android:visibility="gone" />
-
-            <TextView
-                android:id="@+id/tv_three_option"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="휘핑 크림 추가"
-                android:fontFamily="@font/font_pretendard_regular"
-                android:textColor="@color/grayscales_600"
-                android:textSize="11sp"
-                android:visibility="gone" />
+                tools:text="기타사항" />
 
         </LinearLayout>
 

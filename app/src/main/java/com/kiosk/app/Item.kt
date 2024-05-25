@@ -5,10 +5,10 @@ data class Item(
     val name: String,
     val basePrice: Int,
     val count: Int,
-    var size: String,
-    val shot: Boolean,
-    val syrub: Boolean,
-    val cream: Boolean,
+    var size: String = "",
+    val shot: String = "",
+    val syrub: String = "",
+    val cream: String = "",
 ) {
     val price: Int
         get() = basePrice * count

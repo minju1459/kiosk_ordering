@@ -5,44 +5,37 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.kiosk.app.Item
-import com.kiosk.app.MainViewModel
 import com.kiosk.app.databinding.ItemDessertMenuBinding
 import com.kiosk.app.util.DiffCallback
 import com.sopt.instagram.util.extension.setOnSingleClickListener
 
 class DessertAdapter(
-    private val viewModel: MainViewModel,
-    private val showDialog: () -> Unit,
+    private val showDialog: (name: String, image: Int) -> Unit,
 ) : ListAdapter<Item, DessertAdapter.DessertViewHolder>(diffUtil) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DessertViewHolder {
-        val binding =
-            ItemDessertMenuBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return DessertViewHolder(binding, viewModel, showDialog)
+        val binding = ItemDessertMenuBinding.inflate(
+            LayoutInflater.from(parent.context),
+            parent,
+            false
+        )
+        return DessertViewHolder(binding, showDialog)
     }
 
     override fun onBindViewHolder(holder: DessertViewHolder, position: Int) {
-        holder.bind(getItem(position))
-    }
-
-    fun addItems(newItems: List<Item>) {
-        val currentItems = currentList.toMutableList()
-        currentItems.addAll(newItems)
-        submitList(currentItems)
+        holder.bind(getItem(position), showDialog)
     }
 
     class DessertViewHolder(
         private val binding: ItemDessertMenuBinding,
-        private val viewModel: MainViewModel,
-        private val showDialog: () -> Unit,
+        private val showDialog: (name: String, price: Int) -> Unit,
     ) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: Item) {
+        fun bind(item: Item, showDialog: (name: String, image: Int) -> Unit){
             binding.ivDessertMenu.setImageResource(item.image)
             binding.tvDessertName.text = item.name
             binding.tvDessertPrice.text = item.price.toString()
             binding.layoutDessertMenu.setOnSingleClickListener {
-                viewModel.setSelectedItem(item)
-                showDialog()
+                showDialog(item.name, item.image)
             }
         }
     }

@@ -7,11 +7,7 @@ import androidx.lifecycle.ViewModel
 class MainViewModel : ViewModel() {
 
     private val _selectedItem = MutableLiveData<Item>()
-    val selectedItem: LiveData<Item>
-        get() = _selectedItem
-
-    private val _selectedSize = MutableLiveData<String>()
-    val selectedSize: LiveData<String> get() = _selectedSize
+    val selectedItem: LiveData<Item> get() = _selectedItem
 
     private val _totalItemCount = MutableLiveData<Int>()
     val totalItemCount: LiveData<Int> get() = _totalItemCount
@@ -22,11 +18,6 @@ class MainViewModel : ViewModel() {
     fun setSelectedItem(item: Item) {
         _selectedItem.value = item
     }
-
-    fun updateSizeText(size: String) {
-        _selectedSize.value = size
-    }
-
     fun updateTotal(items: List<Item>) {
         val totalCount = items.sumOf { it.count }
         val totalPrice = items.sumOf { it.basePrice * it.count }
