@@ -42,12 +42,12 @@
 
                 <TextView
                     android:id="@+id/tv_menu_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/pretendard_semibold"
                     android:textColor="@color/black"
-                    android:textSize="14sp"
+                    android:textSize="12sp"
                     tools:text="(HOT)아메리카노" />
             </LinearLayout>
 
@@ -83,6 +83,7 @@
                         android:id="@+id/rb_grande_size"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="2dp"
                         android:buttonTint="@color/grayscales_500"
                         android:text="@string/option_grande_size"
                         android:textSize="14sp" />
@@ -122,6 +123,7 @@
                         android:id="@+id/rb_shot_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="2dp"
                         android:buttonTint="@color/grayscales_500"
                         android:text="2샷"
                         android:textSize="14sp" />
@@ -163,6 +165,7 @@
                         android:layout_height="wrap_content"
                         android:buttonTint="@color/grayscales_500"
                         android:text="2샷"
+                        android:layout_marginHorizontal="2dp"
                         android:textSize="14sp" />
 
                     <RadioButton
@@ -202,6 +205,7 @@
                         android:layout_height="wrap_content"
                         android:buttonTint="@color/grayscales_500"
                         android:text="2번"
+                        android:layout_marginHorizontal="2dp"
                         android:textSize="14sp" />
 
                     <RadioButton
