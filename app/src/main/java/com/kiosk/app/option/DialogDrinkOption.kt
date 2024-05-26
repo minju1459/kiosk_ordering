@@ -51,23 +51,23 @@ class DialogDrinkOption :
     }
 
     private fun getSelectedShot() = when (binding.rgShot.checkedRadioButtonId) {
-        R.id.rb_shot_1 -> "1샷 추가(기본)"
-        R.id.rb_shot_2 -> "2샷 추가"
-        R.id.rb_shot_3 -> "3샷 추가"
+        R.id.rb_shot_1 -> "1샷 (기본)"
+        R.id.rb_shot_2 -> "2샷"
+        R.id.rb_shot_3 -> "3샷"
         else -> ""
     }
 
     private fun getSelectedSyrup() = when (binding.rgSyrub.checkedRadioButtonId) {
-        R.id.rb_syrup_1 -> "1번 추가(기본)"
-        R.id.rb_syrup_2 -> "2번 추가"
-        R.id.rb_syrup_3 -> "3번 추가"
+        R.id.rb_syrup_1 -> "1번 (기본)"
+        R.id.rb_syrup_2 -> "2번"
+        R.id.rb_syrup_3 -> "3번"
         else -> ""
     }
 
     private fun getSelectedCream() = when (binding.rgCream.checkedRadioButtonId) {
-        R.id.rb_cream_1 -> "1번 추가(기본)"
-        R.id.rb_cream_2 -> "2번 추가"
-        R.id.rb_cream_3 -> "3번 추가"
+        R.id.rb_cream_1 -> "1번 (기본)"
+        R.id.rb_cream_2 -> "2번"
+        R.id.rb_cream_3 -> "3번"
         else -> ""
     }
 }
