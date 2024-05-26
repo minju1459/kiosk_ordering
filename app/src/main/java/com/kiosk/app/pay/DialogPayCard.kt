@@ -8,17 +8,13 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
 import android.widget.Toast
-import androidx.fragment.app.activityViewModels
 import com.kiosk.app.HomeActivity
-import com.kiosk.app.MainViewModel
 import com.kiosk.app.R
 import com.kiosk.app.databinding.DialogPayCardBinding
 import com.kiosk.app.util.binding.BindingDialogFragment
 import com.sopt.instagram.util.extension.setOnSingleClickListener
 
 class DialogPayCard(private var totalPrice: Int) : BindingDialogFragment<DialogPayCardBinding>(R.layout.dialog_pay_card) {
-
-    private val viewModel by activityViewModels<MainViewModel>()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
