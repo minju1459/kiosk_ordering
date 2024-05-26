@@ -1,21 +1,21 @@
 <resources>
     <string name="app_name">Starbucks Kiosk</string>
+    <string name="adapter_not_initialized_error_msg">Adapter is not initialized</string>
 
     <string name="home_tv_select_method">주문 방법을 선택해주세요</string>
     <string name="home_tv_store">매장</string>
     <string name="home_tv_take_out">포장</string>
     <string name="home_btn_pay">결제하기\n(Pay)</string>
+    <string name="home_tv_warning">※ 환경부 제도 시행 | 매장 내 1회용품 사용 금지 \n 주문이 어려우시거나 현금 결제 등을 원하실 경우 직원을 통해 결제 바랍니다.</string>
 
     <string name="main_tv_logo">STARKBUCKS</string>
-    <string name="tv_main_order_list">주문 내역 (order list)</string>
+    <string name="main_order_list">주문 내역 (order list)</string>
     <string name="main_tv_total_count">총 수량 :</string>
     <string name="main_tv_total_count_unit">개</string>
     <string name="main_tv_total_pay">총 금액 :</string>
     <string name="main_tv_totla_pay_unit">원</string>
     <string name="main_tv_reset">처음으로 (Reset)</string>
     <string name="main_tv_select_menu_count">개</string>
-
-    <string name="adapter_not_initialized_error_msg">Adapter is not initialized</string>
 
     <string name="option_tv_title">옵션 선택 (options)</string>
     <string name="option_tv_temperature">1. 온도 (hot or ice)</string>
@@ -32,20 +32,6 @@
     <string name="option_tv_reheat_yes">따뜻하게 \n데움</string>
     <string name="option_btn_non_reheat">데우지\n않음</string>
     <string name="option_btn_end">완료</string>
-    <string name="item_tv_price">원</string>
-    <string name="pay_tv_ttitle">카드 결제</string>
-    <string name="pay_tv_sub_ttile">다음 그림과 같이 \n신용 / 체크 카드를 넣어주세요</string>
-    <string name="pay_tv_total_price">총 결제 금액</string>
-    <string name="pay_total_one">원</string>
-    <string name="pay_tv_pay_month">할부 개월</string>
-    <string name="pay_tv_pay_once">일시불</string>
-    <string name="pay_tv_card_info">카드 번호</string>
-    <string name="pay_tv_card_number">1234 **** **** 2345</string>
-    <string name="pay_btn_cancel">취소</string>
-    <string name="pay_btn_approve">승인 요청</string>
-    <string name="home_tv_warning">※ 환경부 제도 시행 | 매장 내 1회용품 사용 금지 \n 주문이 어려우시거나 현금 결제 등을 원하실 경우 직원을 통해 결제 바랍니다.</string>
-    <string name="pay_method_tv_cash">현금</string>
-    <string name="pay_method_tv_card">카드</string>
     <string name="option_shot_title">2. 샷 추가 (shot)</string>
     <string name="option_one_shot">1샷</string>
     <string name="option_two_shot">2샷</string>
@@ -59,4 +45,19 @@
     <string name="option_two_cream">2번</string>
     <string name="option_three_cream">3번</string>
     <string name="option_none">없음</string>
+
+    <string name="item_tv_price">원</string>
+
+    <string name="pay_tv_ttitle">카드 결제</string>
+    <string name="pay_tv_sub_ttile">다음 그림과 같이 \n신용 / 체크 카드를 넣어주세요</string>
+    <string name="pay_tv_total_price">총 결제 금액</string>
+    <string name="pay_total_one">원</string>
+    <string name="pay_tv_pay_month">할부 개월</string>
+    <string name="pay_tv_pay_once">일시불</string>
+    <string name="pay_tv_card_info">카드 번호</string>
+    <string name="pay_tv_card_number">1234 **** **** 2345</string>
+    <string name="pay_btn_cancel">취소</string>
+    <string name="pay_btn_approve">승인 요청</string>
+    <string name="pay_method_tv_cash">현금</string>
+    <string name="pay_method_tv_card">카드</string>
 </resources>

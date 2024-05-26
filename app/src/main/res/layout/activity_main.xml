@@ -91,7 +91,7 @@
                         android:fontFamily="@font/pretendard_bold"
                         android:textColor="@color/black"
                         android:textSize="15sp"
-                        android:text="@string/tv_main_order_list" />
+                        android:text="@string/main_order_list" />
 
                     <View
                         android:layout_width="match_parent"
