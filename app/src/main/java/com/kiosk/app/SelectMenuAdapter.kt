@@ -11,7 +11,7 @@ import com.sopt.instagram.util.extension.setOnSingleClickListener
 
 class SelectMenuAdapter(
     private val viewModel: MainViewModel,
-    private val fragmentManager: FragmentManager // FragmentManager 추가
+    private val fragmentManager: FragmentManager
 ) : RecyclerView.Adapter<SelectMenuAdapter.SelectMenuViewHolder>() {
 
     private val items: MutableList<Item> = mutableListOf()
