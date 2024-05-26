@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.kiosk.app.ItemDrink
 import com.kiosk.app.R
 import com.kiosk.app.databinding.FragmentEspressoBinding
-import com.kiosk.app.option.DialogDrinkOption
+import com.kiosk.app.DialogDrinkOption
 import com.kiosk.app.util.binding.BindingFragment
 
 class EspressoFragment : BindingFragment<FragmentEspressoBinding>(R.layout.fragment_espresso) {

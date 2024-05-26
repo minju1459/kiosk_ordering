@@ -8,7 +8,7 @@ import com.kiosk.app.ItemDrink
 import com.kiosk.app.MainViewModel
 import com.kiosk.app.R
 import com.kiosk.app.databinding.FragmentColdbrewBinding
-import com.kiosk.app.option.DialogDrinkOption
+import com.kiosk.app.DialogDrinkOption
 import com.kiosk.app.util.binding.BindingFragment
 
 class ColdBrewFragment : BindingFragment<FragmentColdbrewBinding>(R.layout.fragment_coldbrew) {

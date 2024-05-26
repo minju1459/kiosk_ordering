@@ -1,11 +1,8 @@
-package com.kiosk.app.option
+package com.kiosk.app
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.activityViewModels
-import com.kiosk.app.ItemDrink
-import com.kiosk.app.MainViewModel
-import com.kiosk.app.R
 import com.kiosk.app.databinding.DialogDrinkOptionBinding
 import com.kiosk.app.util.binding.BindingDialogFragment
 import com.sopt.instagram.util.extension.setOnSingleClickListener

@@ -5,16 +5,16 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.kiosk.app.ItemDrink
-import com.kiosk.app.databinding.ItemDessertMenuBinding
+import com.kiosk.app.databinding.ItemFrappuccinoMenuBinding
 import com.kiosk.app.util.DiffCallback
 import com.sopt.instagram.util.extension.setOnSingleClickListener
 
-class DessertAdapter(
+class FrappuccinoAdapter(
     private val showDialog: (name: String, image: Int, basePrice: Int, count: Int) -> Unit,
-) : ListAdapter<ItemDrink, DessertAdapter.DessertViewHolder>(diffUtil) {
+) : ListAdapter<ItemDrink, FrappuccinoAdapter.DessertViewHolder>(diffUtil) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DessertViewHolder {
-        val binding = ItemDessertMenuBinding.inflate(
+        val binding = ItemFrappuccinoMenuBinding.inflate(
             LayoutInflater.from(parent.context),
             parent,
             false,
@@ -27,7 +27,7 @@ class DessertAdapter(
     }
 
     class DessertViewHolder(
-        private val binding: ItemDessertMenuBinding,
+        private val binding: ItemFrappuccinoMenuBinding,
         private val showDialog: (name: String, image: Int, basePrice: Int, count: Int) -> Unit,
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(

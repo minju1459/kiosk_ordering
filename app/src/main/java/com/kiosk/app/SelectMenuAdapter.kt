@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
 import com.kiosk.app.databinding.ItemSelectMenuBinding
-import com.kiosk.app.option.DialogDrinkOption
 import com.sopt.instagram.util.extension.setOnSingleClickListener
 
 class SelectMenuAdapter(
