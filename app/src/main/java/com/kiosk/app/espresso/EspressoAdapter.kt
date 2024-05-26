@@ -4,14 +4,14 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.kiosk.app.Item
+import com.kiosk.app.ItemDrink
 import com.kiosk.app.databinding.ItemEspressoMenuBinding
 import com.kiosk.app.util.DiffCallback
 import com.sopt.instagram.util.extension.setOnSingleClickListener
 
 class EspressoAdapter(
     private val showDialog: (name: String, image: Int, basePrice: Int, count: Int) -> Unit,
-) : ListAdapter<Item, EspressoAdapter.EspressoViewHolder>(diffUtil) {
+) : ListAdapter<ItemDrink, EspressoAdapter.EspressoViewHolder>(diffUtil) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EspressoViewHolder {
         val binding = ItemEspressoMenuBinding.inflate(
@@ -31,7 +31,7 @@ class EspressoAdapter(
         private val showDialog: (name: String, image: Int, basePrice: Int, count: Int) -> Unit,
     ) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(item: Item, showDialog: (name: String, image: Int, basePrice: Int, count: Int) -> Unit) {
+        fun bind(item: ItemDrink, showDialog: (name: String, image: Int, basePrice: Int, count: Int) -> Unit) {
             binding.ivEspressoMenu.setImageResource(item.image)
             binding.tvEspressoName.text = item.name
             binding.tvEspressoPrice.text = item.price.toString()
@@ -42,7 +42,7 @@ class EspressoAdapter(
     }
 
     companion object {
-        private val diffUtil = DiffCallback<Item>(
+        private val diffUtil = DiffCallback<ItemDrink>(
             onItemsTheSame = { old, new -> old == new },
             onContentsTheSame = { old, new -> old == new },
         )

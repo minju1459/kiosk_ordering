@@ -14,7 +14,7 @@ class SelectMenuAdapter(
     private val fragmentManager: FragmentManager
 ) : RecyclerView.Adapter<SelectMenuAdapter.SelectMenuViewHolder>() {
 
-    private val items: MutableList<Item> = mutableListOf()
+    private val items: MutableList<ItemDrink> = mutableListOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SelectMenuViewHolder {
         val binding =
@@ -28,7 +28,7 @@ class SelectMenuAdapter(
 
     override fun getItemCount(): Int = items.size
 
-    fun addItem(item: Item) {
+    fun addItem(item: ItemDrink) {
         items.add(item)
         notifyItemInserted(items.size - 1)
         updateTotal()
@@ -60,7 +60,7 @@ class SelectMenuAdapter(
         private val binding: ItemSelectMenuBinding,
     ) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(item: Item) {
+        fun bind(item: ItemDrink) {
             with(binding) {
                 tvSelectMenu.text = item.name
                 tvMenuPrice.text = item.price.toString()
@@ -87,7 +87,7 @@ class SelectMenuAdapter(
             }
         }
 
-        private fun showDialog(item: Item) {
+        private fun showDialog(item: ItemDrink) {
             val dialog = DialogDrinkOption().apply {
                 arguments = Bundle().apply {
                     putInt("image", item.image)

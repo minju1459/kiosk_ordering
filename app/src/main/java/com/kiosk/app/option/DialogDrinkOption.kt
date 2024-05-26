@@ -3,7 +3,7 @@ package com.kiosk.app.option
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.activityViewModels
-import com.kiosk.app.Item
+import com.kiosk.app.ItemDrink
 import com.kiosk.app.MainViewModel
 import com.kiosk.app.R
 import com.kiosk.app.databinding.DialogDrinkOptionBinding
@@ -27,7 +27,7 @@ class DialogDrinkOption :
             ivMenuImage.setImageResource(image)
             tvMenuName.text = name
             btnOptionQuit.setOnSingleClickListener {
-                val item = Item(
+                val item = ItemDrink(
                     image = image,
                     name = name,
                     basePrice = basePrice,

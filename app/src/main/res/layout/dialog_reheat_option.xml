@@ -30,7 +30,7 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <de.hdodenhof.circleimageview.CircleImageView
@@ -38,15 +38,15 @@
                     android:layout_width="110dp"
                     android:layout_height="110dp"
                     android:contentDescription="@null"
-                    tools:src="@drawable/img_green" />
+                    tools:src="@drawable/img_tomato" />
 
                 <TextView
                     android:id="@+id/tv_menu_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
                     android:layout_marginTop="8dp"
                     android:textColor="@color/black"
-                    tools:text="나는 박미눚인니달ㄴㅇㄹㄴ"
+                    tools:text="토마토마토마토마토마토마토마토바질"
                     android:textSize="14sp"
                     android:fontFamily="@font/pretendard_semibold" />
             </LinearLayout>
@@ -66,81 +66,36 @@
                     android:textSize="16sp" />
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/shape_transparent_fill_grayscales400_line_rectangle"
-                    android:orientation="horizontal">
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
 
-                    <LinearLayout
-                        android:id="@+id/layout_reheat"
-                        android:layout_width="0dp"
+                    <RadioButton
+                        android:id="@+id/rb_warm"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
+                        android:fontFamily="@font/pretendard_semibold"
+                        android:text="따뜻하게 데움"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
 
-                        <ImageView
-                            android:id="@+id/iv_reheat"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginBottom="4dp"
-                            android:src="@drawable/img_reheat" />
-
-                        <Button
-                            android:id="@+id/btn_reheat"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@android:color/transparent"
-                            android:minHeight="0dp"
-                            android:paddingVertical="4dp"
-                            android:text="@string/option_tv_reheat_yes"
-                            android:textSize="13sp" />
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="match_parent"
-                        android:background="@color/grayscales_500" />
-
-                    <LinearLayout
-                        android:id="@+id/layout_non_reheat"
-                        android:layout_width="0dp"
+                    <RadioButton
+                        android:id="@+id/rb_no_heat"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:id="@+id/iv_non_reheat"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginBottom="4dp"
-                            android:paddingHorizontal="10dp"
-                            android:paddingTop="10dp"
-                            android:contentDescription="@null"
-                            android:src="@drawable/img_non_heat" />
-
-                        <Button
-                            android:id="@+id/btn_non_reheat"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@android:color/transparent"
-                            android:minHeight="0dp"
-                            android:paddingVertical="4dp"
-                            android:text="@string/option_btn_non_reheat"
-                            android:textSize="13sp" />
-                    </LinearLayout>
+                        android:fontFamily="@font/pretendard_semibold"
+                        android:text="데우지 않음"
+                        android:layout_marginTop="3dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
                 </LinearLayout>
 
                 <Button
                     android:id="@+id/btn_option_quit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="20dp"
                     android:layout_gravity="right"
                     android:background="#254636"
                     android:textColor="@color/white"

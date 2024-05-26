@@ -4,14 +4,14 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.kiosk.app.Item
+import com.kiosk.app.ItemDrink
 import com.kiosk.app.databinding.ItemTeabanaMenuBinding
 import com.kiosk.app.util.DiffCallback
 import com.sopt.instagram.util.extension.setOnSingleClickListener
 
 class TeabanaAdapter(
     private val showDialog: (name: String, image: Int, basePrice: Int, count: Int) -> Unit,
-) : ListAdapter<Item, TeabanaAdapter.TeabanaViewHolder>(diffUtil) {
+) : ListAdapter<ItemDrink, TeabanaAdapter.TeabanaViewHolder>(diffUtil) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TeabanaViewHolder {
         val binding = ItemTeabanaMenuBinding.inflate(
@@ -30,7 +30,7 @@ class TeabanaAdapter(
         private val binding: ItemTeabanaMenuBinding,
         private val showDialog: (name: String, image: Int, basePrice: Int, count: Int) -> Unit,
     ) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: Item, showDialog: (name: String, image: Int, basePrice: Int, count: Int) -> Unit) {
+        fun bind(item: ItemDrink, showDialog: (name: String, image: Int, basePrice: Int, count: Int) -> Unit) {
             with(binding) {
                 ivTeabanaMenu.setImageResource(item.image)
                 tvTeabanaName.text = item.name
@@ -43,7 +43,7 @@ class TeabanaAdapter(
     }
 
     companion object {
-        private val diffUtil = DiffCallback<Item>(
+        private val diffUtil = DiffCallback<ItemDrink>(
             onItemsTheSame = { old, new -> old == new },
             onContentsTheSame = { old, new -> old == new },
         )

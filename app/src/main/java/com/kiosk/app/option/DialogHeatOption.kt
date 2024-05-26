@@ -7,7 +7,6 @@ import com.kiosk.app.MainViewModel
 import com.kiosk.app.R
 import com.kiosk.app.databinding.DialogReheatOptionBinding
 import com.kiosk.app.util.binding.BindingDialogFragment
-import com.sopt.instagram.util.extension.setOnSingleClickListener
 
 class DialogHeatOption :
     BindingDialogFragment<DialogReheatOptionBinding>(R.layout.dialog_reheat_option) {
@@ -19,15 +18,6 @@ class DialogHeatOption :
         viewModel.selectedItem.observe(viewLifecycleOwner) { selectedItem ->
             binding.ivSelectMenu.setImageResource(selectedItem.image)
             binding.tvMenuName.text = selectedItem.name
-        }
-        with(binding) {
-            btnOptionQuit.setOnSingleClickListener { dismiss() }
-            layoutReheat.setOnSingleClickListener {
-                layoutReheat.setBackgroundResource(R.color.yello_main_300)
-            }
-            layoutNonReheat.setOnSingleClickListener {
-                layoutNonReheat.setBackgroundResource(R.color.yello_main_300)
-            }
         }
     }
 }

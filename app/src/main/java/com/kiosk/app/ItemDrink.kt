@@ -1,6 +1,6 @@
 package com.kiosk.app
 
-data class Item(
+data class ItemDrink(
     val image: Int,
     val name: String,
     val basePrice: Int,
