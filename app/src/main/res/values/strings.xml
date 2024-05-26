@@ -47,15 +47,16 @@
     <string name="pay_method_tv_cash">현금</string>
     <string name="pay_method_tv_card">카드</string>
     <string name="option_shot_title">2. 샷 추가 (shot)</string>
-    <string name="option_one_shot">1샷 (기본)</string>
+    <string name="option_one_shot">1샷</string>
     <string name="option_two_shot">2샷</string>
     <string name="option_three_shot">3샷</string>
     <string name="option_syrub_title">3. 시럽 추가 (syrub)</string>
-    <string name="option_one_syrub">1샷 (기본)</string>
-    <string name="option_two_syrub">2샷</string>
-    <string name="option_three_syrub">3샷</string>
+    <string name="option_one_syrub">1번</string>
+    <string name="option_two_syrub">2번</string>
+    <string name="option_three_syrub">3번</string>
     <string name="option_cream_title">4. 휘핑 크림 추가 (cream)</string>
-    <string name="option_one_cream">1번 (기본)</string>
+    <string name="option_one_cream">1번</string>
     <string name="option_two_cream">2번</string>
     <string name="option_three_cream">3번</string>
+    <string name="option_none">없음</string>
 </resources>

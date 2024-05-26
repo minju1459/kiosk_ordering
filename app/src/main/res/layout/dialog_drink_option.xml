@@ -115,12 +115,20 @@
                     android:orientation="horizontal">
 
                     <RadioButton
+                        android:id="@+id/rb_shot_none"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/grayscales_500"
+                        android:text="@string/option_none"
+                        android:checked="true"
+                        android:textSize="14sp" />
+
+                    <RadioButton
                         android:id="@+id/rb_shot_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:buttonTint="@color/grayscales_500"
                         android:text="@string/option_one_shot"
-                        android:checked="true"
                         android:textSize="14sp" />
 
                     <RadioButton
@@ -157,12 +165,20 @@
                     android:orientation="horizontal">
 
                     <RadioButton
+                        android:id="@+id/rb_syrup_none"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/grayscales_500"
+                        android:text="@string/option_none"
+                        android:checked="true"
+                        android:textSize="14sp" />
+
+                    <RadioButton
                         android:id="@+id/rb_syrup_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:buttonTint="@color/grayscales_500"
                         android:text="@string/option_one_syrub"
-                        android:checked="true"
                         android:textSize="14sp" />
 
                     <RadioButton
@@ -199,12 +215,20 @@
                     android:orientation="horizontal">
 
                     <RadioButton
+                        android:id="@+id/rb_cream_none"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/grayscales_500"
+                        android:text="@string/option_none"
+                        android:checked="true"
+                        android:textSize="14sp" />
+
+                    <RadioButton
                         android:id="@+id/rb_cream_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:buttonTint="@color/grayscales_500"
                         android:text="@string/option_one_cream"
-                        android:checked="true"
                         android:textSize="14sp" />
 
                     <RadioButton
