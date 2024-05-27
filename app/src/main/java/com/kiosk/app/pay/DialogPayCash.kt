@@ -72,7 +72,7 @@ class DialogPayCash(private var totalPrice: Int) :
                 Toast.makeText(context, "결제할 금액이 ${totalPrice}원 남았습니다.", Toast.LENGTH_SHORT).show()
             }
         } else {
-            Toast.makeText(context, "총 금액보다 적은 금액을 입력하세요.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "총 결제 금액보다 적은 금액을 입력하세요.", Toast.LENGTH_SHORT).show()
         }
     }
     private fun navigateToHomeActivity() {
