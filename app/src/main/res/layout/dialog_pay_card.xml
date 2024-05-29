@@ -15,6 +15,7 @@
             android:gravity="center"
             android:padding="10dp"
             android:text="@string/pay_tv_ttitle"
+            android:textStyle="bold"
             android:textColor="@android:color/white"
             android:textSize="18sp" />
 
@@ -23,6 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:gravity="center"
+            android:textStyle="bold"
             android:text="@string/pay_tv_sub_ttile"
             android:textColor="@color/black"
             android:textSize="18sp" />
@@ -51,6 +53,7 @@
             android:layout_weight="1"
             android:paddingStart="5dp"
             android:text="@string/pay_tv_total_price"
+            android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="20sp" />
 
@@ -60,6 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             tools:text="100,000"
+            android:textStyle="bold"
             android:textColor="@color/semantic_red_500"
             android:textSize="20sp" />
 
@@ -69,6 +73,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="25dp"
             android:text="@string/pay_total_one"
+            android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="20sp" />
     </LinearLayout>
@@ -86,8 +91,9 @@
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="8dp"
                 android:layout_weight="1"
+                android:text="@string/card_pay_will"
                 android:paddingStart="5dp"
-                android:text="결제할 금액"
+                android:textStyle="bold"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
@@ -97,6 +103,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:maxLines="1"
+                android:textStyle="bold"
                 android:singleLine="true"
                 android:paddingStart="10dp"
                 android:textColor="@color/semantic_red_500"
@@ -109,6 +116,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="25dp"
                 android:text="@string/pay_total_one"
+                android:textStyle="bold"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
         </LinearLayout>
@@ -125,9 +133,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="8dp"
+                android:text="@string/card_remain_price"
                 android:layout_weight="1"
                 android:paddingStart="5dp"
-                android:text="남은 금액"
+                android:textStyle="bold"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
@@ -137,6 +146,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:textColor="@color/semantic_red_500"
+                android:textStyle="bold"
                 android:textSize="20sp"
                 tools:text="8,000" />
 
@@ -145,6 +155,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="25dp"
+                android:textStyle="bold"
                 android:text="@string/pay_total_one"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
@@ -166,6 +177,7 @@
                 android:background="@color/semantic_red_500"
                 android:padding="20dp"
                 android:text="@string/pay_btn_cancel"
+                android:textStyle="bold"
                 android:textColor="@color/white"
                 android:textSize="16sp" />
 
@@ -175,7 +187,8 @@
                 android:layout_height="wrap_content"
                 android:background="@color/grayscales_700"
                 android:padding="20dp"
-                android:text="결제하기"
+                android:text="@string/card_btn_pay"
+                android:textStyle="bold"
                 android:textColor="@color/white"
                 android:textSize="16sp" />
         </LinearLayout>

@@ -34,6 +34,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:textSize="11sp"
+                android:textStyle="bold"
                 tools:text="바닐라 헤이즐넛 라떼" />
 
             <LinearLayout
@@ -54,6 +55,7 @@
                     android:layout_height="match_parent"
                     android:textColor="@color/black"
                     android:textSize="11sp"
+                    android:textStyle="bold"
                     tools:text="Tall" />
             </LinearLayout>
 
@@ -75,6 +77,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
                     android:textSize="11sp"
+                    android:textStyle="bold"
                     tools:text="1번" />
             </LinearLayout>
 
@@ -96,6 +99,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
                     android:textSize="11sp"
+                    android:textStyle="bold"
                     tools:text="1번" />
             </LinearLayout>
 
@@ -117,6 +121,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
                     android:textSize="11sp"
+                    android:textStyle="bold"
                     tools:text="2번" />
             </LinearLayout>
 
@@ -148,6 +153,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="3dp"
                     android:textColor="@color/black"
+                    android:textStyle="bold"
                     android:textSize="11sp"
                     tools:text="5" />
 
@@ -167,6 +173,7 @@
                 android:layout_marginStart="3dp"
                 android:background="@drawable/shape_transparent_fill_grayscales400_line_15_round"
                 android:scaleType="fitCenter"
+                android:textStyle="bold"
                 android:src="@drawable/ic_main_plus" />
 
         </LinearLayout>

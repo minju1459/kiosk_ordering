@@ -16,6 +16,7 @@
     <string name="main_tv_totla_pay_unit">원</string>
     <string name="main_tv_reset">처음으로 (Reset)</string>
     <string name="main_tv_select_menu_count">개</string>
+    <string name="main_total_zero">0</string>
 
     <string name="option_tv_title">옵션 선택 (options)</string>
     <string name="option_tv_temperature">1. 온도 (hot or ice)</string>
@@ -60,4 +61,18 @@
     <string name="pay_btn_approve">승인 요청</string>
     <string name="pay_method_tv_cash">현금</string>
     <string name="pay_method_tv_card">카드</string>
+
+
+    <string name="card_btn_pay">결제하기</string>
+    <string name="card_remain_price">남은 금액</string>
+    <string name="card_pay_will">결제할 금액</string>
+
+    <string name="cash_btn_pay">결제하기</string>
+    <string name="cash_remain_pay">남은 금액</string>
+    <string name="cash_will_pay">결제할 금액</string>
+    <string name="cash_tv_title">결제할 금액을 입력하세요</string>
+    <string name="cash_tv_pay_cash">현금 결제</string>'
+
+    <string name="method_tv_title">결제 방법</string>
+    <string name="method_select_method">결제 방법을 선택해주세요</string>
 </resources>

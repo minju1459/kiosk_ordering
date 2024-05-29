@@ -17,7 +17,8 @@
             android:background="#599468"
             android:gravity="center"
             android:padding="10dp"
-            android:text="결제 방법"
+            android:text="@string/method_tv_title"
+            android:textStyle="bold"
             android:textColor="@android:color/white"
             android:textSize="18sp" />
 
@@ -26,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:paddingVertical="10dp"
-            android:text="결제 방법을 선택해주세요"
+            android:text="@string/method_select_method"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20sp"

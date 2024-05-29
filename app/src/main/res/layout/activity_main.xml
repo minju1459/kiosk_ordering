@@ -37,6 +37,7 @@
                     android:layout_marginStart="5dp"
                     android:text="@string/main_tv_logo"
                     android:textAlignment="center"
+                    android:textStyle="bold"
                     android:textColor="@color/white"
                     android:textSize="20sp" />
             </LinearLayout>
@@ -89,6 +90,7 @@
                         android:padding="6dp"
                         android:textColor="@color/black"
                         android:textSize="15sp"
+                        android:textStyle="bold"
                         android:text="@string/main_order_list" />
 
                     <View
@@ -132,6 +134,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/main_tv_total_count"
                                 android:textColor="@color/black"
+                                android:textStyle="bold"
                                 android:textSize="15sp" />
 
                             <TextView
@@ -140,13 +143,15 @@
                                 android:layout_height="wrap_content"
                                 android:paddingHorizontal="2dp"
                                 android:textColor="@color/semantic_red_500"
-                                android:text="0"
+                                android:text="@string/main_total_zero"
+                                android:textStyle="bold"
                                 android:textSize="15sp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/main_tv_total_count_unit"
+                                android:textStyle="bold"
                                 android:textColor="@color/semantic_red_500"
                                 android:textSize="15sp" />
 
@@ -162,6 +167,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/main_tv_total_pay"
+                                android:textStyle="bold"
                                 android:textColor="@color/black"
                                 android:textSize="15sp" />
 
@@ -170,8 +176,9 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:paddingHorizontal="2dp"
+                                android:textStyle="bold"
                                 android:textColor="@color/semantic_red_500"
-                                android:text="0"
+                                android:text="@string/main_total_zero"
                                 android:textSize="15sp" />
 
                             <TextView
@@ -221,6 +228,7 @@
                             android:paddingVertical="50dp"
                             android:textColor="@color/white"
                             android:textSize="15sp"
+                            android:textStyle="bold"
                             android:text="@string/home_btn_pay" />
                     </LinearLayout>
 
@@ -231,6 +239,7 @@
                         android:background="@color/grayscales_800"
                         android:textColor="@color/white"
                         android:textSize="12sp"
+                        android:textStyle="bold"
                         android:text="@string/main_tv_reset" />
                 </LinearLayout>
             </LinearLayout>
