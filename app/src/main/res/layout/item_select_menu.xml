@@ -32,7 +32,6 @@
                 android:id="@+id/tv_select_menu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/font_pretendard_semibold"
                 android:textColor="@color/black"
                 android:textSize="11sp"
                 tools:text="바닐라 헤이즐넛 라떼" />
@@ -45,7 +44,6 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/pretendard_regular"
                     android:text="사이즈 : "
                     android:textColor="@color/black"
                     android:textSize="11sp" />
@@ -54,7 +52,6 @@
                     android:id="@+id/tv_size"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:fontFamily="@font/pretendard_regular"
                     android:textColor="@color/black"
                     android:textSize="11sp"
                     tools:text="Tall" />
@@ -68,7 +65,6 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/pretendard_regular"
                     android:text="샷 추가 : "
                     android:textColor="@color/black"
                     android:textSize="11sp" />
@@ -77,7 +73,6 @@
                     android:id="@+id/tv_shot"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/pretendard_regular"
                     android:textColor="@color/black"
                     android:textSize="11sp"
                     tools:text="1번" />
@@ -91,7 +86,6 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/pretendard_regular"
                     android:text="시럽 추가 : "
                     android:textColor="@color/black"
                     android:textSize="11sp" />
@@ -100,7 +94,6 @@
                     android:id="@+id/tv_syrub"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/pretendard_regular"
                     android:textColor="@color/black"
                     android:textSize="11sp"
                     tools:text="1번" />
@@ -114,7 +107,6 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/pretendard_regular"
                     android:text="휘핑 크림 추가: "
                     android:textColor="@color/black"
                     android:textSize="11sp" />
@@ -123,7 +115,6 @@
                     android:id="@+id/tv_cream"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/pretendard_regular"
                     android:textColor="@color/black"
                     android:textSize="11sp"
                     tools:text="2번" />
@@ -156,7 +147,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="3dp"
-                    android:fontFamily="@font/pretendard_semibold"
                     android:textColor="@color/black"
                     android:textSize="11sp"
                     tools:text="5" />
@@ -164,7 +154,6 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/font_pretendard_regular"
                     android:text="@string/main_tv_select_menu_count"
                     android:textColor="@color/black"
                     android:textSize="11sp" />
@@ -187,7 +176,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:fontFamily="@font/pretendard_bold"
             android:textColor="@color/black"
             android:textSize="11sp"
             tools:text="25000" />
@@ -195,7 +183,6 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/pretendard_bold"
             android:textColor="@color/black"
             android:textSize="11sp"
             android:text="@string/item_tv_price" />

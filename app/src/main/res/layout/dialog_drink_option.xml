@@ -14,7 +14,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#599468"
-            android:fontFamily="@font/pretendard_bold"
             android:gravity="center"
             android:padding="8dp"
             android:text="@string/option_tv_title"
@@ -45,7 +44,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_marginTop="8dp"
-                    android:fontFamily="@font/pretendard_semibold"
                     android:textColor="@color/black"
                     android:textSize="12sp"
                     tools:text="(HOT)아메리카노" />
@@ -61,7 +59,6 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/pretendard_bold"
                     android:text="@string/option_tv_size"
                     android:textSize="16sp" />
 
@@ -103,7 +100,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:fontFamily="@font/pretendard_bold"
                     android:text="@string/option_shot_title"
                     android:textSize="16sp" />
 
@@ -154,8 +150,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="@string/option_syrub_title"
-                    android:textSize="16sp"
-                    android:fontFamily="@font/pretendard_bold"/>
+                    android:textSize="16sp" />
 
                 <RadioGroup
                     android:id="@+id/rg_syrub"
@@ -203,7 +198,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:fontFamily="@font/pretendard_bold"
                     android:text="@string/option_cream_title"
                     android:textSize="16sp" />
 
@@ -257,7 +251,6 @@
                     android:layout_gravity="right"
                     android:background="#254636"
                     android:textColor="@color/white"
-                    android:fontFamily="@font/pretendard_semibold"
                     android:text="@string/option_btn_end"
                     android:textSize="17sp" />
             </LinearLayout>

@@ -38,8 +38,7 @@
                     android:text="@string/main_tv_logo"
                     android:textAlignment="center"
                     android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:fontFamily="@font/pretendard_bold" />
+                    android:textSize="20sp" />
             </LinearLayout>
         </androidx.appcompat.widget.Toolbar>
         <com.google.android.material.tabs.TabLayout
@@ -88,7 +87,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
                         android:padding="6dp"
-                        android:fontFamily="@font/pretendard_bold"
                         android:textColor="@color/black"
                         android:textSize="15sp"
                         android:text="@string/main_order_list" />
@@ -134,7 +132,6 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/main_tv_total_count"
                                 android:textColor="@color/black"
-                                android:fontFamily="@font/pretendard_semibold"
                                 android:textSize="15sp" />
 
                             <TextView
@@ -144,7 +141,6 @@
                                 android:paddingHorizontal="2dp"
                                 android:textColor="@color/semantic_red_500"
                                 android:text="0"
-                                android:fontFamily="@font/pretendard_semibold"
                                 android:textSize="15sp" />
 
                             <TextView
@@ -152,7 +148,6 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/main_tv_total_count_unit"
                                 android:textColor="@color/semantic_red_500"
-                                android:fontFamily="@font/pretendard_semibold"
                                 android:textSize="15sp" />
 
                         </LinearLayout>
@@ -168,7 +163,6 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/main_tv_total_pay"
                                 android:textColor="@color/black"
-                                android:fontFamily="@font/pretendard_semibold"
                                 android:textSize="15sp" />
 
                             <TextView
@@ -176,7 +170,6 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:paddingHorizontal="2dp"
-                                android:fontFamily="@font/pretendard_semibold"
                                 android:textColor="@color/semantic_red_500"
                                 android:text="0"
                                 android:textSize="15sp" />
@@ -186,7 +179,6 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/main_tv_totla_pay_unit"
                                 android:textColor="@color/semantic_red_500"
-                                android:fontFamily="@font/pretendard_semibold"
                                 android:textSize="15sp" />
                         </LinearLayout>
                     </LinearLayout>
@@ -226,7 +218,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@color/semantic_red_500"
-                            android:fontFamily="@font/pretendard_semibold"
                             android:paddingVertical="50dp"
                             android:textColor="@color/white"
                             android:textSize="15sp"
@@ -238,7 +229,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/grayscales_800"
-                        android:fontFamily="@font/pretendard_semibold"
                         android:textColor="@color/white"
                         android:textSize="12sp"
                         android:text="@string/main_tv_reset" />
