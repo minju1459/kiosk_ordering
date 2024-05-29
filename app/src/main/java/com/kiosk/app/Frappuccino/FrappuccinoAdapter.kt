@@ -1,4 +1,4 @@
-package com.kiosk.app.dessert
+package com.kiosk.app.Frappuccino
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -34,10 +34,10 @@ class FrappuccinoAdapter(
             item: ItemDrink,
             showDialog: (name: String, image: Int, basePrice: Int, count: Int) -> Unit,
         ) {
-            binding.ivDessertMenu.setImageResource(item.image)
-            binding.tvDessertName.text = item.name
-            binding.tvDessertPrice.text = item.price.toString()
-            binding.layoutDessertMenu.setOnSingleClickListener {
+            binding.ivFrappuccinoMenu.setImageResource(item.image)
+            binding.tvFrappuccinoName.text = item.name
+            binding.tvFrappuccinoPrice.text = item.price.toString()
+            binding.layoutFrappuccinoMenu.setOnSingleClickListener {
                 showDialog(item.name, item.image, item.basePrice, item.count)
             }
         }

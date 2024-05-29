@@ -5,7 +5,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.kiosk.app.blended.BlendedFragment
 import com.kiosk.app.coldbrew.ColdBrewFragment
-import com.kiosk.app.dessert.FrappuccinoFragment
+import com.kiosk.app.Frappuccino.FrappuccinoFragment
 import com.kiosk.app.espresso.EspressoFragment
 import com.kiosk.app.teabana.TeabanaFragment
 

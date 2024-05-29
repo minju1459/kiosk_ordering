@@ -1,4 +1,4 @@
-package com.kiosk.app.dessert
+package com.kiosk.app.Frappuccino
 
 import android.os.Bundle
 import android.view.View
