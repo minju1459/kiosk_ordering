@@ -3,10 +3,10 @@ package com.kiosk.app.blended
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
+import com.kiosk.app.DialogDrinkOption
 import com.kiosk.app.ItemDrink
 import com.kiosk.app.R
 import com.kiosk.app.databinding.FragmentBlendedBinding
-import com.kiosk.app.DialogDrinkOption
 import com.kiosk.app.util.binding.BindingFragment
 
 class BlendedFragment : BindingFragment<FragmentBlendedBinding>(R.layout.fragment_blended) {
